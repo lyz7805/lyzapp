@@ -1,0 +1,24 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.el-table .el-table_1_column_3 .cell {
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+}
+
+.el-tab-pane table {
+    width: 100%;
+    /*max-height: 550px;*/
+}
+
+.el-tab-pane iframe {
+    width: 100%;
+    /*min-height: 250px;*/
+    height: 555px;
+    border: none;
+}
