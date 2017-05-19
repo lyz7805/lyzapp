@@ -9,25 +9,27 @@
  * @return array
  */
 
-function array_iconv($arr, $in_charset="gbk", $out_charset="utf-8") {
+function array_iconv($arr, $in_charset = "gbk", $out_charset = "utf-8")
+{
 
-	$ret = eval('return '.iconv($in_charset,$out_charset,var_export($arr,true).';'));
+    $ret = eval('return '.iconv($in_charset, $out_charset, var_export($arr, true).';'));
 
-	return $ret;
-
+    return $ret;
 }
 
-function is_login($exit = null) {
-	session_start();
-	if (!$_SESSION['LOGIN_USER_ID'] || ($_SESSION['LOGIN_USER_ID'] == '') || !$_SESSION['LOGIN_UID'] || ($_SESSION['LOGIN_UID'] == '')) {
-		if (empty($exit)) {
-			return false;
-		} else {
-			exit;
-		}
-	} else {
-		return true;
-	}
+function is_login($exit = null)
+{
+    session_start();
+    if (!$_SESSION['LOGIN_USER_ID'] || ($_SESSION['LOGIN_USER_ID'] == '') || !$_SESSION['LOGIN_UID'] || ($_SESSION['LOGIN_UID'] == '')) {
+        if (empty($exit)) {
+            return false;
+        } else {
+            return false;
+            exit;
+        }
+    } else {
+        return true;
+    }
 }
 
 is_login(1);

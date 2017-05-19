@@ -3,15 +3,16 @@ include_once '/inc/auth.inc.php';
 include_once '../func.php';
 
 header('Content-type: application/json');
-$xlid = $_GET['id'] ? $_GET['id'] : 0;
+$cplbid = $_GET['cplb'] ? $_GET['cplb'] : 0;
+$xlid = $_GET['xl'] ? $_GET['xl'] : 0;
 
-if ($xlid === 0) {
+if ($cplbid === 0) {
 	return false;
 } else {
-	$zdjc = get_zdjc($xlid);
+	$zdjc = get_zdjc($cplbid);
 	for ($i = 0; $i < count($zdjc); $i++) {
 		$result = array();
-		$sql = 'SELECT * FROM lyzapp.ggzd WHERE cpxl=' . $xlid . ' AND zdjc=' . $zdjc[$i]['zdjc'] . ' ORDER BY id';
+		$sql = 'SELECT * FROM lyzapp.ggzd WHERE cplb=' . $cplbid . ' AND zdjc=' . $zdjc[$i]['zdjc'] . ' ORDER BY id';
 		$curl = exequery(TD::conn(), $sql);
 		while ($row = mysql_fetch_assoc($curl)) {
 			$result[] = array(
@@ -50,7 +51,7 @@ function get_zdjc($id = 0) {
 	if ($id === 0) {
 		return false;
 	} else {
-		$sql = 'SELECT zdjc,COUNT(zdjc) AS count FROM lyzapp.ggzd WHERE cpxl=' . $id . ' GROUP BY zdjc ORDER BY zdjc';
+		$sql = 'SELECT zdjc,COUNT(zdjc) AS count FROM lyzapp.ggzd WHERE cplb=' . $id . ' GROUP BY zdjc ORDER BY zdjc';
 		$curl = exequery(TD::conn(), $sql);
 		while ($row = mysql_fetch_assoc($curl)) {
 			$zdjc[] = $row;

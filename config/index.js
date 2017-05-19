@@ -41,9 +41,9 @@ module.exports = {
       '/inc': {
         target: 'http://localhost',
       },
-      '/static': {
-        target: 'http://localhost',
-      },
+      // '/static': {
+      //   target: 'http://localhost',
+      // },
       // '/flow_det_priv': {
       //   target: 'http://localhost',
       //   // changeOrigin: true,

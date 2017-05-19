@@ -1,3 +1,4 @@
+var webpack = require('webpack')
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
@@ -10,6 +11,8 @@ function resolve (dir) {
 module.exports = {
   entry: {
     app: './src/main.js'
+    // , vue: 'vue',
+    // elementui: 'element-ui'
   },
   output: {
     path: config.build.assetsRoot,
@@ -25,6 +28,15 @@ module.exports = {
       '@': resolve('src')
     }
   },
+  // plugins: [
+  //   new webpack.optimize.CommonsChunkPlugin({
+  //     name: 'vendor', // 指定公共 bundle 的名字。
+  //     minChunks: function (module) {
+  //       // 该配置假定你引入的 vendor 存在于 node_modules 目录中
+  //       return module.context && module.context.indexOf('node_modules') !== -1;
+  //     }
+  //   })
+  // ],
   module: {
     rules: [
       {

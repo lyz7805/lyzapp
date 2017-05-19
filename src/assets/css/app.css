@@ -1,0 +1,85 @@
+  html,
+  body {
+    margin: 0;
+  }
+
+  .left-block {
+    display: block;
+    float: left !important;
+  }
+
+  .right-block {
+    display: block;
+    float: right !important;
+  }
+
+  #main-body .aside-menu-warpper,
+  #main-body .main-section,
+  #main-body .main-section .section {
+    height: 100%
+  }
+
+  #main-body .main-section .section .el-card__body {
+    height: 85%;
+    overflow: auto
+  }
+
+  .el-menu-item i.fa,
+  .el-submenu i.fa {
+    vertical-align: baseline;
+    margin-right: 10px;
+  }
+
+  .list-item .index {
+    margin: 10px 5px;
+    padding: 10px;
+    border: 1px solid #d1dbe5;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
+    text-align: center;
+    font-size: 0.8em
+  }
+  /*.list-item .index:hover {
+    box-shadow: 0px 0px 5px 3px rgba(33, 150, 243, 0.6);
+  }*/
+
+  .list-item .index .to {
+    display: block;
+    text-decoration: none;
+    color: #20a0ff;
+  }
+
+  .list-item .index .to img {
+    width: 90%
+  }
+
+  .list-item .index .to i {
+    font-size: 2.5em;
+    color: #1d90e6
+  }
+
+  .list-item .index:hover .to,
+  .list-item .index:hover .to i {
+    color: #8BC34A;
+  }
+
+  .list-item .index .to div {
+    margin-top: 10px
+  }
+
+  @media screen and (min-width: 768px) {
+    #main-body {
+      position: absolute;
+      height: 92%;
+      width: 100%
+    }
+    /*.aside-menu-warpper {
+      position: fixed
+    }*/
+    #main-body .main-section {
+      position: absolute;
+      right: 0;
+    }
+  }
