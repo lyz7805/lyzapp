@@ -29,7 +29,7 @@
     methods: {
       setBreadcrumb (index, indexPath) {
         // console.log(index, indexPath)
-        // console.log(this.$route)
+        console.log(this.$route)
       }
     }
   }

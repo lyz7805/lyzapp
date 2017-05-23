@@ -10,14 +10,14 @@
           <aside-menu></aside-menu>
         </el-col>
         <el-col :sm="19" :md="20" :lg="21" class="main-section">
-          <el-card class="section">
-            <div slot="header">
+          <el-row class="section">
+            <el-col :span="24" class="breadcrumb">
               <breadcrumb></breadcrumb>
-            </div>
-            <section>
+            </el-col>
+            <section class="el-col el-col-24">
               <router-view></router-view>
             </section>
-          </el-card>
+          </el-row>
         </el-col>
       </el-row>
     </template>

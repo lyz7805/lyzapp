@@ -36,67 +36,57 @@
             </el-button>
           </div>
           <el-radio-group class="card-body" v-model="selectedZd[index]" size="small" @change="getCpxxlb">
-            <el-radio-button class="radio" v-for="item in item.zdlb" :key="item.id" :label="item.id" :disabled="true">
-              {{ /*item.id + */'(' + item.zdid + ')' + item.zdsm }}
+            <el-radio-button class="radio" v-for="item in item.zdlb" :key="item.id" :label="item.id" :disabled="false">
+              {{ item.id + '(' + item.zdid + ')' + item.zdsm }}
             </el-radio-button>
           </el-radio-group>
         </div>
       </el-row>
     </el-col>
-    <!--<el-col :span="24">
-          <el-row class="ggzd" type="flex" justify="start" v-loading="loading">
-            <div class="card">
-              <div class="card-header">
-                <el-button type="text" size="mini" @click="clearRadio('selectedCplbid')" title="清除已选" :disabled="false">
-                  产品类别
-                  <i class="el-icon-delete el-icon--right"></i>
-                </el-button>
-              </div>
-              <el-radio-group class="card-body" v-model="selectedCplbid" size="small" fill="#ffeb3b" text-color="#03A9F4">
-                <el-radio class="radio" v-for="item in cplb" :key="item.id" :label="item.id">
-                  {{ item.lbmc }}
-                </el-radio>
-              </el-radio-group>
-            </div>
-            <div class="card" v-show="selectedCplbid">
-              <div class="card-header">
-                <el-button type="text" size="mini" @click="clearRadio('selectedXlid')" title="清除已选" :disabled="false">
-                  产品系列
-                  <i class="el-icon-delete el-icon--right"></i>
-                </el-button>
-              </div>
-              <el-radio-group class="card-body" v-model="selectedXlid" size="small">
-                <el-radio class="radio" v-for="item in cpxl" :key="item.id" :label="item.id">
-                  {{ item.xlmc }}
-                </el-radio>
-              </el-radio-group>
-            </div>
-            <div class="card" v-for="(item,index) in cpxlzd" :key="index">
-              <div class="card-header">
-                <el-button type="text" size="mini" @click="clearRadio('selectedZd', index)" title="清除已选">
-                  {{ '字段' + item.zdjc }}
-                  <i class="el-icon-delete el-icon--right"></i>
-                </el-button>
-              </div>
-              <el-radio-group class="card-body" v-model="selectedZd[index]" size="small" @change="getCpxxlb">
-                <el-radio class="radio" v-for="item in item.zdlb" :key="item.id" :label="item.id">
-                  {{ '(' + item.zdid + ')' + item.zdsm }}
-                </el-radio>
-              </el-radio-group>
-            </div>
-          </el-row>
-        </el-col>-->
     <el-col :span="24">
-      <el-table :data="cpxxlb" border max-height="340" style="width:100%">
-        <el-table-column type="index" width="50px" align="center"></el-table-column>
+      <el-table class="cpxx" :data="cpxxlb" border max-height="340" style="width:100%">
+        <el-table-column type="index" width="55px" align="center"></el-table-column>
         <el-table-column prop="wlbm" label="物料编码" width="150px" align="center"></el-table-column>
         <!--<el-table-column prop="ggzd" label="规格字段" width=""></el-table-column>-->
         <el-table-column prop="cpmc" label="产品名称" width="150px" align="center"></el-table-column>
         <el-table-column prop="ggxh" label="规格型号" width="180px"></el-table-column>
         <el-table-column prop="jsyq" label="技术要求" min-width="200px"></el-table-column>
         <el-table-column prop="bz" label="备注" width="180px"></el-table-column>
+        <el-table-column prop="bz" label="操作" width="50px" fixed="right">
+          <template scope="scope">
+            <el-button type="text" size="small" title="查询详细信息" @click="showDetail(scope.row)">详细</el-button>
+          </template>
+        </el-table-column>
       </el-table>
     </el-col>
+    <el-dialog title="产品信息" :visible.sync="showDetailDialog" size="large" v-loading="detailLoading">
+      <el-form :model="cpxx" label-position="left" label-suffic=":" label-width="100px">
+        <el-form-item label="物料编码">
+          <el-input v-model="cpxx.wlbm" size="small" readonly></el-input>
+        </el-form-item>
+        <el-form-item label="产品名称">
+          <el-input v-model="cpxx.cpmc" size="small" readonly></el-input>
+        </el-form-item>
+        <el-form-item label="规格型号">
+          <el-input v-model="cpxx.ggxh" size="small" readonly></el-input>
+        </el-form-item>
+        <el-form-item label="技术要求">
+          <el-input v-model="cpxx.jsyq" type="textarea" autosize readonly></el-input>
+        </el-form-item>
+        <el-form-item label="标配清单">
+          <el-input v-model="cpxx.bpqd" size="small" readonly></el-input>
+        </el-form-item>
+        <el-form-item label="说明书">
+          <el-input v-model="cpxx.sms" size="small" readonly></el-input>
+        </el-form-item>
+        <el-form-item label="备注">
+          <el-input v-model="cpxx.bz" type="textarea" autosize readonly></el-input>
+        </el-form-item>
+        <el-form-item label="其他">
+          <el-input v-model="cpxx.qt" size="small" readonly></el-input>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
   </el-row>
 </template>
 
@@ -112,7 +102,10 @@
         selectedCplbid: '',
         selectedXlid: '',
         selectedZd: [],
-        cpxxlb: []
+        cpxxlb: [],
+        cpxx: {},
+        showDetailDialog: false,
+        detailLoading: false
       }
     },
     created () {
@@ -125,6 +118,7 @@
     },
     watch: {
       selectedCplbid () {
+        this.selectedZd = []
         var cplbid = this.selectedCplbid
         this.loading = true
         if (cplbid === '') {
@@ -135,8 +129,12 @@
             this.$http.spread((cpxl, cpxlzd) => {
               this.cpxl = cpxl.data
               this.cpxlzd = cpxlzd.data
+              this.selectedZd[cpxlzd.data.length - 1] = ''
+              // this.selectedZd = new Array(cpxlzd.data.length)
+              console.log(cpxl, cpxlzd, this.selectedZd)
             })
           )
+          this.getCpxxlb()
         }
         this.loading = false
       },
@@ -145,26 +143,18 @@
         if (this.selectedXlid === '') {
           this.cpxlzd = []
           this.cpxxlb = []
-          this.loading = false
         } else {
-          var url = '/lyzapp/api/cpgl/cpxlzd.php'
-          this.$http.get(url, {
-            params: {
-              id: this.selectedXlid
-            }
-          }).then(response => {
-            // console.log(response)
-            for (var i = 0; i < response.data.length; i++) {
-              this.selectedZd[i] = ''
-            }
+          var response = this.getCpxlzd(this.selectedCplbid, this.selectedXlid)
+          if (response) {
             this.cpxlzd = response.data
-            this.getCpxxlb()
-            this.loading = false
-          }).catch(() => {
+            console.log(response)
+            this.cpxlzd = response.data
+          } else {
             this.cpxlzd = []
             this.loading = false
-          })
+          }
         }
+        this.loading = false
       }
     },
     methods: {
@@ -176,12 +166,29 @@
           }
         })
       },
-      getCpxlzd (cplbid) {
+      getCpxlzd (cplbid, xlid = null) {
         var url = '/lyzapp/api/cpgl/cpxlzd.php'
+        var params = { cplbid: cplbid }
+        if (xlid !== null) {
+          params.xlid = xlid
+        }
         return this.$http.get(url, {
+          params
+        })
+      },
+      getCpxxlb () {
+        console.log(this.selectedZd)
+        var url = '/lyzapp/api/cpgl/cpxxlb.php'
+        this.$http.get(url, {
           params: {
-            cplb: cplbid
+            cplbid: this.selectedCplbid,
+            xlid: this.selectedXlid,
+            zd: this.selectedZd.toString()
           }
+        }).then(response => {
+          this.cpxxlb = response.data
+        }).catch(() => {
+          this.cpxxlb = []
         })
       },
       clearRadio (val, index = null) {
@@ -191,18 +198,24 @@
           this.$set(this[val], index, '')
         }
       },
-      getCpxxlb () {
-        var url = '/lyzapp/api/cpgl/cpxxlb.php'
+      showDetail (row) {
+        var url = '/lyzapp/api/cpgl/cpxx.php'
+        this.detailLoading = true
         this.$http.get(url, {
           params: {
-            xlid: this.selectedXlid,
-            zd: this.selectedZd.toString()
+            cpid: row.id
           }
         }).then(response => {
-          this.cpxxlb = response.data
+          this.showDetailDialog = true
+          this.cpxx = response.data
         }).catch(() => {
-          this.cpxxlb = []
+          this.$message({
+            showClose: true,
+            message: '对不起，没有获取到信息，请稍后再试 ☹',
+            type: 'error'
+          })
         })
+        this.detailLoading = false
       }
     }
   }
@@ -265,6 +278,13 @@
   
   .card-body .radio .el-radio__input input,
   .card-body .radio .el-radio__label {
+    font-size: 12px
+  }
+  
+  .cpxx.el-table .cell,
+  .cpxx.el-table th>div {
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 12px
   }
 </style>

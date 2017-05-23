@@ -1,78 +1,87 @@
 <template>
-	<el-row>
-    <el-table :data="data" border max-height="600">
+  <el-row>
+    <el-table :data="cplb" border max-height="600">
       <el-table-column type="index" width="80px" align="center"></el-table-column>
-      <el-table-column prop="cpxl" label="产品系列" sortable width="" align="center"></el-table-column>
-      <el-table-column prop="xlmc" label="系列名称" width="" align="center"></el-table-column>
-      <el-table-column prop="bz" label="备注" width="" align="center"></el-table-column>
-      <el-table-column  label="操作" width="100px" align="center">
+      <el-table-column prop="cplb" label="产品类别" sortable width="" align="center"></el-table-column>
+      <el-table-column prop="lbmc" label="类别名称" width="" align="center"></el-table-column>
+      <el-table-column label="操作" width="100px" align="center">
         <template scope="scope">
-          <el-button type="text" size="small" @click.native.prevent="handleEdit(scope.$index, scope.row)">修改</el-button>
+          <el-button type="text" size="small" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
         </template>
       </el-table-column>
     </el-table>
     <el-dialog title="" :visible.sync="dialogVisible">
-      <el-form :model="form">
-        <el-form-item label="产品系列">
-          <el-input v-model="form.cpxl"></el-input>
+      <el-form :model="cplbxx">
+        <el-form-item label="产品类别">
+          <el-input v-model="cplbxx.cplb"></el-input>
         </el-form-item>
-        <el-form-item label="系列名称">
-          <el-input v-model="form.xlmc"></el-input>
-        </el-form-item>
-        <el-form-item label="备注">
-          <el-input v-model="form.bz"></el-input>
+        <el-form-item label="类别名称">
+          <el-input v-model="cplbxx.lbmc"></el-input>
         </el-form-item>
       </el-form>
       <div slot="footer">
         <el-button type="text" @click="dialogVisible = false">取消</el-button>
-        <el-button type="primary" @click="showOK">确定</el-button>
+        <el-button type="primary" @click="updateCPlb(editIndex)">确定</el-button>
       </div>
     </el-dialog>
   </el-row>
 </template>
 
 <script>
-import axios from 'axios'
-export default {
-  name: 'hello',
-  data () {
-    return {
-      data: [],
-      dialogVisible: false,
-      editIndex: null,
-      form: {}
-    }
-  },
-  created () {
-    var url = '/lyzapp/api/cpgl/cpxl.php'
-    axios.post(url).then(response => {
-      this.data = response.data
-    }).catch(() => {
-      this.data = []
-    })
-  },
-  methods: {
-    handleEdit (index, row) {
-      // console.log(index, row)
-      this.form = row
-      this.form.index = index
-      this.editIndex = index
-      this.dialogVisible = true
+  export default {
+    name: 'cplb',
+    data () {
+      return {
+        cplb: [],
+        dialogVisible: false,
+        editIndex: null,
+        cplbxx: {}
+      }
     },
-    showOK () {
-      this.data[this.editIndex] = this.form
-      this.dialogVisible = false
-      this.$message({
-        showClose: true,
-        message: '修改成功！',
-        type: 'success'
-      })
+    created () {
+      this.getCplb()
+    },
+    methods: {
+      getCplb () {
+        var url = '/lyzapp/api/cpgl/cplb.php'
+        this.$http.get(url).then(response => {
+          this.cplb = response.data
+        }).catch(() => {
+          this.cplb = []
+        })
+      },
+      handleEdit (index, row) {
+        var url = '/lyzapp/api/cpgl/cplb.php'
+        this.$http.get(url, {
+          params: {
+            id: row.id
+          }
+        }).then(response => {
+          this.cplbxx = response.data
+          this.dialogVisible = true
+        }).catch(() => {
+          this.$message({
+            type: 'error',
+            message: '未获取到数据，请稍后再试'
+          })
+        })
+        this.editIndex = index
+        console.log(row, this.$data)
+      },
+      updateCPlb (index) {
+        this.$set(this.cplb, index, this.cplbxx)
+        this.dialogVisible = false
+        this.$message({
+          showClose: true,
+          message: '修改成功！',
+          type: 'success'
+        })
+      }
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  
 </style>
