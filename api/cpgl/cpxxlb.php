@@ -1,14 +1,12 @@
 <?php
+
 include_once '../func.php';
 include_once '/inc/auth.inc.php';
-
 header('Content-type: application/json');
 $cplbid = $_GET['cplbid'] ? $_GET['cplbid'] : false;
 $xlid = $_GET['xlid'] ? $_GET['xlid'] : false;
 // $zd = $_GET['zd'] ? $_GET['zd'] : '%';
-$zd = $_GET['zd'] ? $_GET['zd'] : ',';
-
-if ($cplbid === false) {
+$zd = $_GET['zd'] ? $_GET['zd'] : ','; if ($cplbid === false) {
     return false;
 } else {
     $zd = split(',', $_GET['zd']);
@@ -20,11 +18,11 @@ if ($cplbid === false) {
     $ggzd = implode(',', $zd);
 }
 $sql = 'SELECT cpxx.id AS id, wlbm, cpmc, jsyq, bz,ggxh.id AS ggxhid, ggxh.ggxh AS ggxh, ggzd FROM (lyzapp.cpxx JOIN lyzapp.ggxh ON((cpxx.ggxh = ggxh.id))) WHERE';
-$sql .= ' cplb=' . $cplbid . ' AND ';
+$sql .= ' cplb='.$cplbid.' AND ';
 if ($xlid) {
-    $sql .= ' cpxl=' . $xlid . ' AND ';
+    $sql .= ' cpxl='.$xlid.' AND ';
 }
-$sql .= ' ggzd LIKE \'' . $ggzd . '\'';
+$sql .= ' ggzd LIKE \''.$ggzd.'\'';
 $sql .= ' ORDER BY ggxh,id';
 // echo $sql,'<br>';
 $curl = exequery(TD::conn(), $sql);

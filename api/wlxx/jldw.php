@@ -1,4 +1,5 @@
 <?php
+
 require_once '../func.php';
 require_once '../conn.php';
 
@@ -11,15 +12,15 @@ $sql = 'SELECT * FROM lc0529999.JSJLDW ';
 // $sql .= ' WHERE JSJLDW_DWDM=\'00000001\'';
 $sql .= ' ORDER BY JSJLDW_DWDM';
 $result = sqlsrv_query($conn, $sql);
-if ($result == FALSE)
+if ($result == false) {
     die(print_r(sqlsrv_errors()));
-while($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC))
-{
+}
+while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
     $data[] = array(
         'dwdm' => $row['JSJLDW_DWDM'],
         'dwmc' => $row['JSJLDW_DWMC'],
         'xsws' => $row['JSJLDW_XSWS'],
-        'bz' => $row['JSJLDW_BZ']
+        'bz' => $row['JSJLDW_BZ'],
     );
 }
 sqlsrv_free_stmt($result);

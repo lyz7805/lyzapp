@@ -1,4 +1,5 @@
 <?php
+
 include_once '../func.php';
 include_once '/inc/auth.inc.php';
 
@@ -11,10 +12,10 @@ if ($id === 0) {
         $data[] = $row;
     }
 } else {
-    $sql = 'SELECT * FROM lyzapp.cplb WHERE id=\'' . $id . '\'';
+    $sql = 'SELECT * FROM lyzapp.cplb WHERE id=\''.$id.'\'';
     $curl = exequery(TD::conn(), $sql);
     if ($row = mysql_fetch_assoc($curl)) {
-        $data= $row;
+        $data = $row;
     }
 }
 
