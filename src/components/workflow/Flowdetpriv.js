@@ -1,4 +1,3 @@
-import axios from 'axios'
 export default {
   name: 'flowdetpriv',
   data () {
@@ -15,7 +14,7 @@ export default {
   },
   created () {
     var url = '/lyzapp/api/workflow/flow_det_priv/flow_list.php'
-    axios.get(url).then(response => {
+    this.$http.get(url).then(response => {
       // console.log(response)
       this.flow_list = response.data
     }, () => {
@@ -33,7 +32,7 @@ export default {
     submitForm () {
       this.loading = true
       var url = '/lyzapp/api/workflow/flow_det_priv/data.php'
-      axios.get(url, {
+      this.$http.get(url, {
         params: {
           'flow_id': this.flow_id
         }

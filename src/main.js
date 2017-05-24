@@ -7,7 +7,7 @@ import 'element-ui/lib/theme-default/index.css'
 import App from './App'
 import router from './router'
 import 'font-awesome/css/font-awesome.min.css'
-import '@/assets/css/app.css'
+import './assets/css/app.css'
 
 if (!window.Promise) {
   require('es6-promise/auto')
@@ -22,5 +22,7 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: {
+    App
+  }
 })

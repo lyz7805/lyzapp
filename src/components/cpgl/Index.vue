@@ -10,17 +10,17 @@
 </template>
 
 <script>
-import ChildrenList from '../ChildrenList'
-export default {
-  name: 'index',
-  components: {
-    'children-list': ChildrenList
+  import ChildrenList from '../ChildrenList'
+  export default {
+    name: 'index',
+    components: {
+      'children-list': ChildrenList
+    }
   }
-}
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  
 </style>

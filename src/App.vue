@@ -25,7 +25,6 @@
 </template>
 
 <script>
-  import axios from 'axios'
   import MainHeader from './components/commons/Header'
   import AsideMenu from './components/commons/Asidemenu'
   import Breadcrumb from './components/commons/Breadcrumb'
@@ -38,7 +37,7 @@
     },
     created () {
       var url = '/lyzapp/api/isLogin.php'
-      axios.get(url).then(response => {
+      this.$http.get(url).then(response => {
         if (response.data === true) {
           this.isLogin = true
         } else {

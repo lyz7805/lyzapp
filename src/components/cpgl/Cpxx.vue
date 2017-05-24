@@ -4,10 +4,12 @@
       <el-row class="ggzd" type="flex" justify="start" v-loading="loading">
         <div class="card">
           <div class="card-header">
-            <el-button type="text" size="mini" @click="clearRadio('selectedCplbid')" title="清除已选" :disabled="false">
-              产品类别
-              <i class="el-icon-delete el-icon--right"></i>
-            </el-button>
+            <el-tooltip effect="dark" content="清除已选" placemen="bottom-start">
+              <el-button type="text" size="mini" @click="clearRadio('selectedCplbid')" :disabled="false">
+                产品类别
+                <i class="el-icon-delete el-icon--right"></i>
+              </el-button>
+            </el-tooltip>
           </div>
           <el-radio-group class="card-body" v-model="selectedCplbid" size="small" fill="#ffeb3b" text-color="#03A9F4">
             <el-radio-button class="radio" v-for="item in cplb" :key="item.id" :label="item.id">
@@ -17,10 +19,12 @@
         </div>
         <div class="card" v-show="selectedCplbid">
           <div class="card-header">
-            <el-button type="text" size="mini" @click="clearRadio('selectedXlid')" title="清除已选" :disabled="false">
-              产品系列
-              <i class="el-icon-delete el-icon--right"></i>
-            </el-button>
+            <el-tooltip effect="dark" content="清除已选" placemen="bottom-start">
+              <el-button type="text" size="mini" @click="clearRadio('selectedXlid')" :disabled="false">
+                产品系列
+                <i class="el-icon-delete el-icon--right"></i>
+              </el-button>
+            </el-tooltip>
           </div>
           <el-radio-group class="card-body" v-model="selectedXlid" size="small">
             <el-radio-button class="radio" v-for="item in cpxl" :key="item.id" :label="item.id">
@@ -30,13 +34,15 @@
         </div>
         <div class="card" v-for="(item,index) in cpxlzd" :key="index">
           <div class="card-header">
-            <el-button type="text" size="mini" @click="clearRadio('selectedZd', index)" title="清除已选">
-              {{ '字段' + item.zdjc }}
-              <i class="el-icon-delete el-icon--right"></i>
-            </el-button>
+            <el-tooltip effect="dark" content="清除已选" placemen="bottom-start">
+              <el-button type="text" size="mini" @click="clearRadio('selectedZd', index)">
+                {{ '字段' + item.zdjc }}
+                <i class="el-icon-delete el-icon--right"></i>
+              </el-button>
+            </el-tooltip>
           </div>
           <el-radio-group class="card-body" v-model="selectedZd[index]" size="small" @change="getCpxxlb">
-            <el-radio-button class="radio" v-for="item in item.zdlb" :key="item.id" :label="item.id" :disabled="false">
+            <el-radio-button class="radio" v-for="item in item.zdlb" :key="item.id" :label="item.id" :disabled="isNotAvaliable(selectedXlid, item.cpxl)">
               {{ item.id + '(' + item.zdid + ')' + item.zdsm }}
             </el-radio-button>
           </el-radio-group>
@@ -44,7 +50,7 @@
       </el-row>
     </el-col>
     <el-col :span="24">
-      <el-table class="cpxx" :data="cpxxlb" border max-height="340" style="width:100%">
+      <el-table class="cpxx table-condensed" :data="cpxxlb" border max-height="340" style="width:100%">
         <el-table-column type="index" width="55px" align="center"></el-table-column>
         <el-table-column prop="wlbm" label="物料编码" width="150px" align="center"></el-table-column>
         <!--<el-table-column prop="ggzd" label="规格字段" width=""></el-table-column>-->
@@ -52,14 +58,16 @@
         <el-table-column prop="ggxh" label="规格型号" width="180px"></el-table-column>
         <el-table-column prop="jsyq" label="技术要求" min-width="200px"></el-table-column>
         <el-table-column prop="bz" label="备注" width="180px"></el-table-column>
-        <el-table-column prop="bz" label="操作" width="50px" fixed="right">
+        <el-table-column prop="bz" label="操作" width="50px" align="center" fixed="right">
           <template scope="scope">
-            <el-button type="text" size="small" title="查询详细信息" @click="showDetail(scope.row)">详细</el-button>
+            <el-tooltip effect="dark" content="查询详细信息" placement="left">
+              <el-button type="text" size="small" @click="showDetail(scope.row)">详细</el-button>
+            </el-tooltip>
           </template>
         </el-table-column>
       </el-table>
     </el-col>
-    <el-dialog title="产品信息" :visible.sync="showDetailDialog" size="large" v-loading="detailLoading">
+    <el-dialog id="cpinfo" title="产品信息" :visible.sync="showDetailDialog" size="large" v-loading="detailLoading">
       <el-form :model="cpxx" label-position="left" label-suffic=":" label-width="100px">
         <el-form-item label="物料编码">
           <el-input v-model="cpxx.wlbm" size="small" readonly></el-input>
@@ -77,7 +85,9 @@
           <el-input v-model="cpxx.bpqd" size="small" readonly></el-input>
         </el-form-item>
         <el-form-item label="说明书">
-          <el-input v-model="cpxx.sms" size="small" readonly></el-input>
+          <!--<el-input v-model="cpxx.sms" size="small" readonly></el-input>-->
+          <!--<router-link to="/pdf">说明书</router-link>-->
+          <el-button type="text" size="small" @click="isshowpdf = true">说明书</el-button>
         </el-form-item>
         <el-form-item label="备注">
           <el-input v-model="cpxx.bz" type="textarea" autosize readonly></el-input>
@@ -87,12 +97,19 @@
         </el-form-item>
       </el-form>
     </el-dialog>
+    <el-dialog :visible.sync="isshowpdf" size="full">
+      <c-pdf @closepdf="closePdf" :pdfurl="testpdfurl"></c-pdf>
+    </el-dialog>
   </el-row>
 </template>
 
 <script>
+  import pdf from '../pdfjs/Pdfjs'
   export default {
     name: 'wllb',
+    components: {
+      'c-pdf': pdf
+    },
     data () {
       return {
         loading: false,
@@ -105,12 +122,15 @@
         cpxxlb: [],
         cpxx: {},
         showDetailDialog: false,
-        detailLoading: false
+        detailLoading: false,
+        isshowpdf: false,
+        // testpdfurl: '//cdn.mozilla.net/pdfjs/tracemonkey.pdf',
+        testpdfurl: '/static/RA601H系列便携式氢气分析仪说明书.pdf'
       }
     },
     created () {
-      var url1 = '/lyzapp/api/cpgl/cplb.php'
-      this.$http.post(url1).then(response => {
+      var url = '/lyzapp/api/cpgl/cplb.php'
+      this.$http.post(url).then(response => {
         this.cplb = response.data
       }).catch(() => {
         this.cplb = []
@@ -118,6 +138,7 @@
     },
     watch: {
       selectedCplbid () {
+        this.selectedXlid = ''
         this.selectedZd = []
         var cplbid = this.selectedCplbid
         this.loading = true
@@ -129,8 +150,7 @@
             this.$http.spread((cpxl, cpxlzd) => {
               this.cpxl = cpxl.data
               this.cpxlzd = cpxlzd.data
-              this.selectedZd[cpxlzd.data.length - 1] = ''
-              // this.selectedZd = new Array(cpxlzd.data.length)
+              this.selectedZd = new Array(cpxlzd.data.length)
               console.log(cpxl, cpxlzd, this.selectedZd)
             })
           )
@@ -140,20 +160,7 @@
       },
       selectedXlid () {
         this.loading = true
-        if (this.selectedXlid === '') {
-          this.cpxlzd = []
-          this.cpxxlb = []
-        } else {
-          var response = this.getCpxlzd(this.selectedCplbid, this.selectedXlid)
-          if (response) {
-            this.cpxlzd = response.data
-            console.log(response)
-            this.cpxlzd = response.data
-          } else {
-            this.cpxlzd = []
-            this.loading = false
-          }
-        }
+        this.getCpxxlb()
         this.loading = false
       }
     },
@@ -198,6 +205,20 @@
           this.$set(this[val], index, '')
         }
       },
+      isNotAvaliable (search, array) {
+        if (search === null || search === '') {
+          return false
+        } else {
+          for (var index = 0; index < array.length; index++) {
+            if (search === array[index]) {
+              return false
+            } else {
+              continue
+            }
+          }
+          return true
+        }
+      },
       showDetail (row) {
         var url = '/lyzapp/api/cpgl/cpxx.php'
         this.detailLoading = true
@@ -216,6 +237,9 @@
           })
         })
         this.detailLoading = false
+      },
+      closePdf () {
+        this.isshowpdf = false
       }
     }
   }
@@ -281,10 +305,10 @@
     font-size: 12px
   }
   
-  .cpxx.el-table .cell,
-  .cpxx.el-table th>div {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 12px
+  #cpinfo input,
+  #cpinfo textarea {
+    border: none;
+    border-bottom: 1px solid #bfcbd9;
+    border-radius: 0
   }
 </style>

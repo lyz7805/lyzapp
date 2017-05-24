@@ -1,9 +1,9 @@
 <template>
   <el-row>
-    <h5>{{ $route.name }}：</h5>
+    <h5>{{ $route.name }}:</h5>
     <el-row>
       <template v-for="(item, index) in children">
-        <el-col :xs="6" :sm="4" :lg="3" :key="index" class="list-item">
+        <el-col :xs="12" :sm="6" :lg="4" :key="index" class="list-item">
           <div class="index">
             <router-link class="to" :to="$route.path + '/' + item.path">
               <i class="icon" :class="item.iconCls ? item.iconCls : 'fa fa-file-o'"></i>

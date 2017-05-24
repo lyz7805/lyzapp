@@ -25,6 +25,7 @@ if ($xlid) {
 $sql .= ' ggzd LIKE \''.$ggzd.'\'';
 $sql .= ' ORDER BY ggxh,id';
 // echo $sql,'<br>';
+$data = array();
 $curl = exequery(TD::conn(), $sql);
 while ($row = mysql_fetch_assoc($curl)) {
     $data[] = $row;

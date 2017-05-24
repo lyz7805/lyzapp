@@ -13,6 +13,8 @@ import Cpxl from '@/components/cpgl/Cpxl'
 import Cpxlzd from '@/components/cpgl/Cpxlzd'
 import Workflow from '@/components/workflow/Index'
 import Flowdetpriv from '@/components/workflow/Flowdetpriv.vue'
+// import Pdf from '@/components/pdfjs/web/viewer.vue'
+// import Pdf from '@/components/pdfjs/Pdfjs.vue'
 
 Vue.use(Router)
 

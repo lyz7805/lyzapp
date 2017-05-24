@@ -22,4 +22,3 @@ if ($cplbid === 0) {
     $data = array_iconv($data);
     echo json_encode($data);
 }
-str_replace($cplbid, $_GET['hel']); echo 'hel', $cplbid;

@@ -4,7 +4,7 @@ include_once '../../func.php';
 include_once 'inc/auth.inc.php';
 include_once 'inc/utility_org.php';
 
-header('Content-type: application/json');
+header('Content-type: application/json;charset=utf-8');
 
 $flow_id = $_GET['flow_id'] ? $_GET['flow_id'] : 0;
 if ($flow_id > 0) {
@@ -19,9 +19,9 @@ if ($flow_id > 0) {
             'prcs_id' => $row['PRCS_ID'],
             'name' => $row['PRCS_NAME'],
             'prcs' => array(
-                array('label' => '用户', 'prcs' => $prcs_user),
-                array('label' => '部门', 'prcs' => $prcs_dept),
-                array('label' => '角色', 'prcs' => $prcs_priv),
+                array('label' => iconv('utf-8', 'gbk', '用户'), 'prcs' => $prcs_user),
+                array('label' => iconv('utf-8', 'gbk', '部门'), 'prcs' => $prcs_dept),
+                array('label' => iconv('utf-8', 'gbk', '角色'), 'prcs' => $prcs_priv),
             ),
             'writable' => $row['PRCS_ITEM'],
             'hidden' => $row['HIDDEN_ITEM'],
