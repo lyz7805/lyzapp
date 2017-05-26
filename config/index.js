@@ -51,11 +51,11 @@ module.exports = {
       //     '^/flow_det_priv': '/flow_det_priv0'
       //   }
       // },
-      '/lyzapp/api': {
+      '/lyzapp/': {
         target: 'http://localhost',
         // changeOrigin: true,
         pathRewrite: {
-          '^/lyzapp/api': '/lyzapp/api'
+          '^/lyzapp/': '/lyzapp/'
         }
       }
     },

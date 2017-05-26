@@ -23,7 +23,21 @@
     display: block;
     float: right !important;
   }
+#main-header .logo {
+    height: 60px;
+    padding: 15px;
+    line-height: 30px;
+    font-family: 'SimHei';
+    font-size: 1.3em;
+    text-align: center;
+    color: #1D8CE0;
+  }
 
+  @media (min-width: 768px) {
+    #main-header .logo {
+      border-right: 1px solid #fff;
+    }
+  }
   #main-body .aside-menu-warpper,
   #main-body .main-section,
   #main-body .main-section .section {

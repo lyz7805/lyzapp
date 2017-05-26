@@ -10,13 +10,13 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-dialog title="" :visible.sync="dialogVisible">
+    <el-dialog title="产品类别" :visible.sync="dialogVisible">
       <el-form :model="cplbxx">
         <el-form-item label="产品类别">
-          <el-input v-model="cplbxx.cplb"></el-input>
+          <el-input v-model="cplbxx.cplb" size="small"></el-input>
         </el-form-item>
         <el-form-item label="类别名称">
-          <el-input v-model="cplbxx.lbmc"></el-input>
+          <el-input v-model="cplbxx.lbmc" size="small"></el-input>
         </el-form-item>
       </el-form>
       <div slot="footer">

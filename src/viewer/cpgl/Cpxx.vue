@@ -67,8 +67,8 @@
         </el-table-column>
       </el-table>
     </el-col>
-    <el-dialog id="cpinfo" title="产品信息" :visible.sync="showDetailDialog" size="large" v-loading="detailLoading">
-      <el-form :model="cpxx" label-position="left" label-suffic=":" label-width="100px">
+    <el-dialog id="cpinfo" title="产品信息" :visible.sync="showDetailDialog" size="small" v-loading="detailLoading">
+      <el-form :model="cpxx" label-position="right" label-suffix="：" label-width="100px">
         <el-form-item label="物料编码">
           <el-input v-model="cpxx.wlbm" size="small" readonly></el-input>
         </el-form-item>
@@ -82,12 +82,13 @@
           <el-input v-model="cpxx.jsyq" type="textarea" autosize readonly></el-input>
         </el-form-item>
         <el-form-item label="标配清单">
-          <el-input v-model="cpxx.bpqd" size="small" readonly></el-input>
+          <!--<el-input v-model="cpxx.bpqd" size="small" readonly></el-input>-->
+          <el-button type="text" size="small" @click="viewPdf(cpxx.bpqd)">标配清单</el-button>
         </el-form-item>
         <el-form-item label="说明书">
           <!--<el-input v-model="cpxx.sms" size="small" readonly></el-input>-->
           <!--<router-link to="/pdf">说明书</router-link>-->
-          <el-button type="text" size="small" @click="isshowpdf = true">说明书</el-button>
+          <el-button type="text" size="small" @click="viewPdf(cpxx.sms)">说明书</el-button>
         </el-form-item>
         <el-form-item label="备注">
           <el-input v-model="cpxx.bz" type="textarea" autosize readonly></el-input>
@@ -97,19 +98,20 @@
         </el-form-item>
       </el-form>
     </el-dialog>
-    <el-dialog :visible.sync="isshowpdf" size="full">
-      <c-pdf @closepdf="closePdf" :pdfurl="testpdfurl"></c-pdf>
+    <el-dialog :visible.sync="isshowpdf" size="large" top="0" custom-class="pdfviewer" :show-close="true">
+      <!--<c-pdf @closepdf="closePdf" :pdfurl="testpdfurl"></c-pdf>-->
+      <embed width="100%" height="100%" name="plugin" id="plugin" :src="pdfurl" type="application/pdf" internalinstanceid="3">
     </el-dialog>
   </el-row>
 </template>
 
 <script>
-  import pdf from '../pdfjs/Pdfjs'
+  // import pdf from '../components/pdfjs/Pdfjs'
   export default {
     name: 'wllb',
-    components: {
-      'c-pdf': pdf
-    },
+    // components: {
+    //   'c-pdf': pdf
+    // },
     data () {
       return {
         loading: false,
@@ -125,7 +127,7 @@
         detailLoading: false,
         isshowpdf: false,
         // testpdfurl: '//cdn.mozilla.net/pdfjs/tracemonkey.pdf',
-        testpdfurl: '/static/RA601H系列便携式氢气分析仪说明书.pdf'
+        pdfurl: ''
       }
     },
     created () {
@@ -169,7 +171,7 @@
         var url = '/lyzapp/api/cpgl/cpxl.php'
         return this.$http.get(url, {
           params: {
-            cplb: cplbid
+            cplbid: cplbid
           }
         })
       },
@@ -237,6 +239,10 @@
           })
         })
         this.detailLoading = false
+      },
+      viewPdf (pdfname) {
+        this.pdfurl = '/lyzapp/attach/cpgl/201705/' + pdfname + '.pdf'
+        this.isshowpdf = true
       },
       closePdf () {
         this.isshowpdf = false
@@ -308,7 +314,26 @@
   #cpinfo input,
   #cpinfo textarea {
     border: none;
-    border-bottom: 1px solid #bfcbd9;
-    border-radius: 0
+    border-bottom: 1px dashed;
+    border-radius: 0;
+    /*text-shadow: 0px 1px 0px #2196F3;*/
+  }
+  
+  .pdfviewer {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    background-color: #525659
+  }
+  
+  .pdfviewer .el-dialog__header {
+    display: none
+  }
+  
+  .pdfviewer .el-dialog__body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden
   }
 </style>

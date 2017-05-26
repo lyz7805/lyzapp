@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Index'
-import Login from '@/components/login/Login'
-import Wlxx from '@/components/wlxx/Index'
-import Wlml from '@/components/wlxx/Wlml'
-import Wllb from '@/components/wlxx/Wllb'
-import Jldw from '@/components/wlxx/Jldw'
-import Cpgl from '@/components/cpgl/Index'
-import Cpxx from '@/components/cpgl/Cpxx'
-import Cplb from '@/components/cpgl/Cplb'
-import Cpxl from '@/components/cpgl/Cpxl'
-import Cpxlzd from '@/components/cpgl/Cpxlzd'
-import Workflow from '@/components/workflow/Index'
-import Flowdetpriv from '@/components/workflow/Flowdetpriv.vue'
+import Login from '@/viewer/login/Login'
+import Wlxx from '@/viewer/wlxx/Index'
+import Wlml from '@/viewer/wlxx/Wlml'
+import Wllb from '@/viewer/wlxx/Wllb'
+import Jldw from '@/viewer/wlxx/Jldw'
+import Cpgl from '@/viewer/cpgl/Index'
+import Cpxx from '@/viewer/cpgl/Cpxx'
+import Cplb from '@/viewer/cpgl/Cplb'
+import Cpxl from '@/viewer/cpgl/Cpxl'
+import Cpxlzd from '@/viewer/cpgl/Cpxlzd'
+import Workflow from '@/viewer/workflow/Index'
+import Flowdetpriv from '@/viewer/workflow/Flowdetpriv.vue'
 // import Pdf from '@/components/pdfjs/web/viewer.vue'
-// import Pdf from '@/components/pdfjs/Pdfjs.vue'
+import Pdf from '@/components/pdfjs/Pdfjs.vue'
 
 Vue.use(Router)
 
@@ -37,7 +37,7 @@ export default new Router({
     children: [{
       path: 'cpxx',
       name: '产品选型',
-      iconCls: 'fa fa-file-o',
+      iconCls: 'fa fa-search',
       isShow: true,
       component: Cpxx
     }, {
@@ -51,10 +51,15 @@ export default new Router({
       isShow: true,
       component: Cpxl
     }, {
-      path: 'cpxlzd',
-      name: '产品系列字段',
+      path: 'cplbzd',
+      name: '字段管理',
       isShow: true,
       component: Cpxlzd
+    }, {
+      path: 'xlzd',
+      name: '系列字段',
+      isShow: true,
+      component: Cpxl
     }]
   }, {
     path: '/wlxx',
@@ -89,11 +94,11 @@ export default new Router({
     path: '/user',
     name: '用户管理',
     iconCls: 'fa fa-user',
-    component: Home,
+    component: Cpgl,
     children: [{
       path: 'userinfo',
       name: '用户信息',
-      component: Home
+      component: Pdf
     }, {
       path: 'userinfo1',
       name: '用户信息b',
@@ -117,5 +122,11 @@ export default new Router({
     iconCls: 'fa fa-sign-in',
     isShow: false,
     component: Login
+  }, {
+    path: '/pdf',
+    name: 'PDF',
+    iconCls: 'fa fa-sign-in',
+    isShow: false,
+    component: Pdf
   }]
 })

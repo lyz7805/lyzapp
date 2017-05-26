@@ -1,31 +1,52 @@
 <template>
-  <el-row class="cpdf">
-    <el-col :span="24" class="contor">
-      <el-button @click="prev" icon="arrow-left" size="mini" title="上一页"></el-button>
-      <el-button @click="next" icon="arrow-right" size="mini" title="下一页"></el-button> &nbsp; &nbsp;
-      <span>
-        <i class="el-icon-document"></i>
-        <span v-text="page_num"></span> /
+  <div class="pdf">
+    <div class="pdf-row pdf-header">
+      <div class="pdf-col pdf-title">
+        <span v-text="title"></span>
+      </div>
+      <div class="pdf-col pdf-pages">
+        <span>
+          <input type="text" v-model="page_num">
+        </span> /
         <span v-text="page_count"></span>
-      </span>
-      &nbsp; &nbsp;
-      <el-button @click="addscale" icon="plus" size="mini" title="放大"></el-button>
-      <el-button @click="minus" icon="minus" size="mini" title="缩小"></el-button>
-      <el-button id="prev" @click="closepdf" icon="close" size="mini" title="关闭"></el-button>
-    </el-col>
-    <el-col :span="24" class="center">
+      </div>
+      <div class="pdf-col pdf-cons">
+        <button type="text" @click="prev" title="顺时针旋转">
+          <i class="fa fa-repeat"></i>
+        </button>
+        <button type="text" @click="prev" title="下载">
+          <i class="fa fa-download"></i>
+        </button>
+        <button type="text" @click="prev" title="打印">
+          <i class="fa fa-print"></i>
+        </button>
+        <!--<button type="text" @click="prev" icon="arrow-left" size="" title="上一页"></button>
+                                <button type="text" @click="next" icon="arrow-right" size="" title="下一页"></button>
+                                <button type="text" @click="addscale" icon="plus" size="" title="放大"></button>
+                                <button type="text" @click="minus" icon="minus" size="" title="缩小"></button>
+                                <button type="text" id="prev" @click="closepdf" icon="close" size="" title="关闭"></button>-->
+      </div>
+    </div>
+    <section class="pdf-row pdf-section" :span="24">
       <canvas class="canvasstyle" id="the-canvas"></canvas>
-    </el-col>
-  </el-row>
+    </section>
+    <!--<embed width="100%" height="100%" name="plugin" id="plugin" :src="testpdfurl" type="application/pdf" internalinstanceid="3">-->
+  </div>
 </template>
 
 <script>
   import PDFJS from 'pdfjs-dist/build/pdf.js'
   export default {
     name: 'pdfjs',
-    props: ['pdfurl'],
+    props: {
+      pdfurl: {
+        type: String,
+        default: '/lyzapp/attach/cpgl/201705/pdfjstest.pdf'
+      }
+    },
     data () {
       return {
+        title: '123456789',
         pdfDoc: null, // pdfjs 生成的对象
         pageNum: 1, //
         pageRendering: false,
@@ -127,23 +148,80 @@
 </script>
 
 <style>
-  .cpdf {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #525659;
+  .pdf {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
+    background-color: #525659;
     text-align: center;
+    color: #f0f8ff
   }
   
-  .center {
-    height: 100%;
-    overflow: auto;
+  .pdf .pdf-row {
+    box-sizing: border-box
   }
   
-  .contor {
-    padding: 10px;
-    background-color: #393c3e;
+  .pdf .pdf-col {
+    float: left;
+    box-sizing: border-box;
+    width: 33.33333%
+  }
+  
+  .pdf .pdf-header {
+    height: 50px;
+    padding: 5px;
+    line-height: 40px;
+    background: #262626;
+    font-size: 14px
+  }
+  
+  .pdf .pdf-header .pdf-title {
+    padding-left: 25px;
+    text-align: left
+  }
+  
+  .pdf .pdf-header .pdf-pages {
+    font-size: 12px;
+  }
+  
+  .pdf .pdf-header .pdf-pages>span>input {
+    border: none;
+    outline: none;
+    width: 10px;
+    background-color: #262626;
+    color: #f0f8ff;
+    font-size: 16px
+  }
+  
+  .pdf .pdf-header .pdf-pages>span>input:hover,
+  .pdf .pdf-header .pdf-pages>span>input:focus {
+    background-color: #000
+  }
+  
+  .pdf .pdf-header .pdf-cons {
+    padding-right: 25px;
+    overflow: hidden;
+    text-align: right
+  }
+  
+  .pdf .pdf-header .pdf-cons button {
+    padding: 8px;
+    border: none;
+    border-radius: 100%;
+    outline: none;
+    background-color: #262626;
+    color: #f0f8ff;
+    font-size: 14px;
+    transition: all 1000ms
+  }
+  
+  .pdf .pdf-header .pdf-cons button:focus {
+    background-color: #515151;
+  }
+  
+  .pdf section.pdf-row.pdf-section {
+    clear: both;
+    padding: 8px 0;
+    box-sizing: border-box;
   }
 </style>

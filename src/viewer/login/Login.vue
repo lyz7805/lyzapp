@@ -9,6 +9,12 @@
     data () {
       return {
       }
+    },
+    beforeMount () {
+      console.log(this)
+      if (this.$data.isLogin === true) {
+        this.$router.push('/')
+      }
     }
   }
 

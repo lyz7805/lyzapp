@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <template v-if=" !isLogin">
+    <template v-if="$route.path == '/pdf'">
+      <router-view></router-view>
+    </template>
+    <template v-if=" !$store.state.isLogin">
       <router-view></router-view>
     </template>
     <template v-else>
@@ -32,23 +35,38 @@
     name: 'app',
     data () {
       return {
-        isLogin: false
       }
-    },
-    created () {
-      var url = '/lyzapp/api/isLogin.php'
-      this.$http.get(url).then(response => {
-        if (response.data === true) {
-          this.isLogin = true
-        } else {
-          this.$router.push('/login')
-        }
-      })
     },
     components: {
       'main-header': MainHeader,
       'aside-menu': AsideMenu,
       breadcrumb: Breadcrumb
+    },
+    created () {
+      var url = '/lyzapp/api/isLogin.php'
+      this.$http.get(url).then(response => {
+        if (response.data === true) {
+          this.$store.commit('loginIn')
+          // console.log(1, this.isLogin)
+        } else {
+          this.$router.push('/login')
+        }
+      }).catch(() => {
+        this.$router.push('/login')
+      })
+      // console.log(2, this.$route, this.isLogin)
+    },
+    watch: {
+      '$route' () {
+        if (this.$route.path === '/login' && this.$store.state.isLogin === true) {
+          this.$router.push('/')
+        }
+      }
+    },
+    mounted () {
+      console.log(this.$store)
+      // console.log(3)
+      // console.log(4)
     }
   }
 

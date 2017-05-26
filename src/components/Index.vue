@@ -31,9 +31,10 @@
       return {
         img: img
       }
+    },
+    mounted () {
     }
   }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
