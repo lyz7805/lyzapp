@@ -82,13 +82,10 @@
           <el-input v-model="cpxx.jsyq" type="textarea" autosize readonly></el-input>
         </el-form-item>
         <el-form-item label="标配清单">
-          <!--<el-input v-model="cpxx.bpqd" size="small" readonly></el-input>-->
-          <el-button type="text" size="small" @click="viewPdf(cpxx.bpqd)">标配清单</el-button>
+          <el-button type="text" size="small" @click="viewPdf(cpxx.bpqd)" :disabled="!cpxx.bpqd">标配清单</el-button>
         </el-form-item>
         <el-form-item label="说明书">
-          <!--<el-input v-model="cpxx.sms" size="small" readonly></el-input>-->
-          <!--<router-link to="/pdf">说明书</router-link>-->
-          <el-button type="text" size="small" @click="viewPdf(cpxx.sms)">说明书</el-button>
+          <el-button type="text" size="small" @click="viewPdf(cpxx.sms)" :disabled="!cpxx.sms">说明书</el-button>
         </el-form-item>
         <el-form-item label="备注">
           <el-input v-model="cpxx.bz" type="textarea" autosize readonly></el-input>
@@ -99,19 +96,14 @@
       </el-form>
     </el-dialog>
     <el-dialog :visible.sync="isshowpdf" size="large" top="0" custom-class="pdfviewer" :show-close="true">
-      <!--<c-pdf @closepdf="closePdf" :pdfurl="testpdfurl"></c-pdf>-->
       <embed width="100%" height="100%" name="plugin" id="plugin" :src="pdfurl" type="application/pdf" internalinstanceid="3">
     </el-dialog>
   </el-row>
 </template>
 
 <script>
-  // import pdf from '../components/pdfjs/Pdfjs'
   export default {
     name: 'wllb',
-    // components: {
-    //   'c-pdf': pdf
-    // },
     data () {
       return {
         loading: false,
@@ -126,7 +118,6 @@
         showDetailDialog: false,
         detailLoading: false,
         isshowpdf: false,
-        // testpdfurl: '//cdn.mozilla.net/pdfjs/tracemonkey.pdf',
         pdfurl: ''
       }
     },
@@ -153,7 +144,7 @@
               this.cpxl = cpxl.data
               this.cpxlzd = cpxlzd.data
               this.selectedZd = new Array(cpxlzd.data.length)
-              console.log(cpxl, cpxlzd, this.selectedZd)
+              // console.log(cpxl, cpxlzd, this.selectedZd)
             })
           )
           this.getCpxxlb()
@@ -186,7 +177,6 @@
         })
       },
       getCpxxlb () {
-        console.log(this.selectedZd)
         var url = '/lyzapp/api/cpgl/cpxxlb.php'
         this.$http.get(url, {
           params: {

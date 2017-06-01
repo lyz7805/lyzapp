@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <template v-if="$route.path == '/pdf'">
-      <router-view></router-view>
-    </template>
     <template v-if=" !$store.state.isLogin">
       <router-view></router-view>
     </template>
     <template v-else>
-      <main-header></main-header>
-      <el-row id="main-body">
-        <el-col :sm="5" :md="4" :lg="3" class="aside-menu-warpper">
-          <aside-menu></aside-menu>
-        </el-col>
-        <el-col :sm="19" :md="20" :lg="21" class="main-section">
-          <el-row class="section">
-            <el-col :span="24" class="breadcrumb">
-              <breadcrumb></breadcrumb>
-            </el-col>
-            <section class="el-col el-col-24">
-              <router-view></router-view>
-            </section>
-          </el-row>
-        </el-col>
-      </el-row>
+      <template v-if="$route.path == '/pdf'">
+        <router-view></router-view>
+      </template>
+      <template v-else>
+        <main-header></main-header>
+        <el-row id="main-body">
+          <el-col :sm="5" :md="4" :lg="3" class="aside-menu-warpper">
+            <aside-menu></aside-menu>
+          </el-col>
+          <el-col :sm="19" :md="20" :lg="21" class="main-section">
+            <el-row class="section">
+              <el-col :span="24" class="breadcrumb">
+                <breadcrumb></breadcrumb>
+              </el-col>
+              <section class="el-col el-col-24">
+                <router-view></router-view>
+              </section>
+            </el-row>
+          </el-col>
+        </el-row>
+      </template>
     </template>
   </div>
 </template>
@@ -64,7 +66,7 @@
       }
     },
     mounted () {
-      console.log(this.$store)
+      // console.log(this.$store)
       // console.log(3)
       // console.log(4)
     }
