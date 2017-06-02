@@ -11,13 +11,12 @@ import router from './router'
 import 'font-awesome/css/font-awesome.min.css'
 import './assets/css/app.css'
 
-require('es6-promise/auto')
+// es6-promise has been required in vuex
+// if (!window.Promise) {
+//   require('es6-promise').polyfill()
+// }
 
-if (!window.Promise) {
-  require('es6-promise/auto')
-}
-require('es6-promise').polyfill()
-
+axios.defaults.withCredentials = true
 // Vue.use(Vuex)
 Vue.use(ElemetUI)
 Vue.config.productionTip = false

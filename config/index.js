@@ -1,5 +1,6 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
+var proxyServer = 'http://localhost'
 
 module.exports = {
   build: {
@@ -28,31 +29,31 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+      '/logincheck.php': {
+        target: proxyServer
+      },
       '/general': {
-        target: 'http://localhost',
+        target: proxyServer
         // changeOrigin: true,
         // pathRewrite: {
         //   '^/general': '^/general'
         // }
       },
       '/inc': {
-        target: 'http://localhost',
+        target: proxyServer
       },
-      '/inc': {
-        target: 'http://localhost',
+      '/static/templates': {
+        target: proxyServer
       },
-      // '/static': {
-      //   target: 'http://localhost',
-      // },
       // '/flow_det_priv': {
-      //   target: 'http://localhost',
+      //   target: proxyServer,
       //   // changeOrigin: true,
       //   pathRewrite: {
       //     '^/flow_det_priv': '/flow_det_priv0'
       //   }
       // },
       '/lyzapp/': {
-        target: 'http://localhost',
+        target: proxyServer,
         // changeOrigin: true,
         pathRewrite: {
           '^/lyzapp/': '/lyzapp/'

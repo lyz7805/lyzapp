@@ -10,7 +10,7 @@
             <div></div>
             <div v-text="time"></div>
             <div>
-              <el-button type="text" size="" @click="$store.commit('loginOut')">
+              <el-button type="text" size="" @click="loginOut()">
                 <i class="fa fa-sign-out"></i> 退出
               </el-button>
             </div>
@@ -56,6 +56,18 @@
         setInterval(function () {
           that.time = (new Date()).toLocaleString()
         }, 1000)
+      }
+    },
+    methods: {
+      loginOut () {
+        this.$http.get('/general/relogin.php').then(response => {
+          this.$message({
+            message: '您已安全推出！',
+            type: 'info'
+          })
+          this.$router.push('/login')
+          this.$store.commit('loginOut')
+        })
       }
     }
   }

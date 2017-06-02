@@ -49,26 +49,42 @@
       this.$http.get(url).then(response => {
         if (response.data === true) {
           this.$store.commit('loginIn')
-          // console.log(1, this.isLogin)
+          this.$message({
+            message: '欢迎回来！',
+            type: 'success',
+            duration: 1500
+          })
         } else {
           this.$router.push('/login')
         }
       }).catch(() => {
         this.$router.push('/login')
       })
-      // console.log(2, this.$route, this.isLogin)
     },
     watch: {
-      '$route' () {
+      '$route' (to, from) {
+        console.log(to, from)
+        if (this.$store.state.isLogin === false && to.path === '/login') {
+          this.$message({
+            message: '您还未登录，请先登录...',
+            type: 'warning'
+          })
+        }
+        if (this.$store.state.isLogin === true && from.path === '/login') {
+          this.$message({
+            message: '登录成功，欢迎回来！',
+            type: 'success',
+            duration: 1500
+          })
+        }
         if (this.$route.path === '/login' && this.$store.state.isLogin === true) {
           this.$router.push('/')
         }
       }
     },
     mounted () {
+      // console.log(document.cookie)
       // console.log(this.$store)
-      // console.log(3)
-      // console.log(4)
     }
   }
 
