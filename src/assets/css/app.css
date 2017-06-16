@@ -24,6 +24,20 @@
     float: right !important;
   }
 
+  #main-header li {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    position: relative;
+    transition: border-color .3s, background-color .3s, color .3s;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
+
   #main-header .logo {
     height: 60px;
     padding: 15px;
@@ -32,6 +46,16 @@
     font-size: 1.3em;
     text-align: center;
     color: #1D8CE0;
+  }
+
+  #main-header .el-menu--horizontal .el-menu-item {
+    border-bottom: none
+  }
+
+  #main-header .el-menu--horizontal>.el-menu-item:hover,
+  #main-header .el-menu--horizontal>.el-submenu.is-active .el-submenu__title,
+  #main-header .el-menu--horizontal>.el-submenu:hover .el-submenu__title {
+    border-bottom: none
   }
 
   @media (min-width: 768px) {

@@ -1,26 +1,24 @@
 <template>
-  <div id="login">
-    <img src="/static/templates/2017_01/tdxk.png" class="tdxk">
-    <form class="login_form" name="form1" method="post" autocomplete="off" onsubmit="return CheckForm();">
-      <div id="center" class="center">
-        <img src="/static/templates/2017_01/logo.png" class="logo">
-        <div class="input-wrap name">
-          <i for="name">
-            <img src="/static/templates/2017_01/userName.png">
-          </i>
-          <input type="text" id="name" name="UNAME" maxlength="20" autocomplete="off" onmouseover="this.focus()" onfocus="this.select()" v-model="uname" placeholder="请输入用户名">
-        </div>
-        <div class="input-wrap password">
-          <i for="password">
-            <img src="/static/templates/2017_01/passWord.png">
-          </i>
-          <input type="password" id="password" name="PASSWORD" autocomplete="new-password" onmouseover="this.focus()" onfocus="this.select()" v-model="password" placeholder="请输入密码">
-        </div>
-        <input type="hidden" name="encode_type" v-model="encode_type">
-        <button type="submit" id="submit" class="login_btn" @click="loginIn()" title="登录"></button>
-      </div>
-    </form>
-  </div>
+  <el-row id="login">
+    <el-form ref="login_form" class="login_form animated zoomIn" name="form1" method="post" label-width="0" label-position="left" autocomplete="on">
+      <img src="/static/images/logo.png" class="logo animated tada">
+      <el-form-item class="input-wrap">
+        <icon name="icon-my_icon" class="animated"></icon>
+        <el-input type="text" size="small" id="name" name="UNAME" :maxlength="20" auto-complete autofocus v-model="uname" placeholder="请输入用户名"></el-input>
+      </el-form-item>
+      <el-form-item class="input-wrap">
+        <icon name="icon-password_icon" class="animated"></icon>
+        <el-input type="password" size="small" id="password" name="PASSWORD" auto-complete autofocus v-model="password" placeholder="请输入密码"></el-input>
+      </el-form-item>
+      <el-form-item style="display:none;">
+        <el-input type="hidden" name="encode_type" v-model="encode_type"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" id="submit" class="login_btn" @click="loginIn()">登录
+        </el-button>
+      </el-form-item>
+    </el-form>
+  </el-row>
 </template>
 
 <script>
@@ -75,13 +73,13 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
   #login {
     position: absolute;
     width: 100%;
     height: 100%;
     font-size: 16px;
-    background: url(/static/templates/2017_01/login_bg1920.jpg) no-repeat;
+    background: url(/static/images/login_bg.jpg) no-repeat;
     background-size: 100% 100%;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -89,13 +87,6 @@
     -khtml-user-select: none;
     user-select: none;
     text-align: center
-  }
-  
-  #login .tdxk {
-    position: fixed;
-    top: 100px;
-    left: 100px;
-    width: 100px;
   }
   
   #login .login_form {
@@ -109,58 +100,51 @@
     margin-left: -250px;
   }
   
-  #login .center {
-    width: 100%;
-    height: 100%
-  }
-  
-  #login .center .logo {
+  #login .logo {
     margin: 10px auto
   }
   
-  #login .center .input-wrap {
-    width: 250px;
-    height: 50px;
-    margin: 10px auto;
-    line-height: 50px;
-    border-bottom: 1px solid #cccccc;
+  #login .input-wrap {
+    width: 300px;
+    margin: 24px auto;
   }
   
-  #login .center input {
+  #login .input-wrap .el-form-item__content {
+    margin-left: 0px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: transparent;
+    box-sizing: content-box;
+    vertical-align: middle;
+  }
+  
+  #login .input-wrap .el-form-item__content:hover {
+    border-color: #8391a5
+  }
+  
+  #login .input-wrap .el-form-item__content:hover svg.icon {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+  }
+  
+  #login .input-wrap .el-form-item__content svg.icon {
+    width: 50px;
+    color: #2196f3
+  }
+  
+  #login .input-wrap .el-form-item__content .el-input {
+    width: 240px
+  }
+  
+  #login .input-wrap .el-form-item__content .el-input input {
     border: none;
-    outline: none;
-    background: none;
-    height: 30px;
-    padding: 10px
+    padding: 0;
+    background: transparent
   }
   
-  #login .center i {
-    position: relative
-  }
-  
-  #login .center i img {
-    width: 15px;
-    position: relative;
-    top: 4px
-  }
-  
-  #login form .login_btn {
-    margin-top: 50px;
-    height: 46px;
-    line-height: 46px;
-    text-align: center;
-    width: 262px;
-    font-size: 16px;
-    outline: none;
-    cursor: pointer;
-    border-radius: 46px;
-    background-color: transparent;
-    border: none;
-    background-image: url(/static/templates/2017_01/login_btn.png);
-    background-position: -24px -62px;
-  }
-  
-  #login form .login_btn:hover {
-    background-position: -24px -144px;
+  .login_btn {
+    width: 300px
   }
 </style>

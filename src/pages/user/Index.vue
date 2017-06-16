@@ -4,25 +4,23 @@
       <children-list></children-list>
     </template>
     <template v-else>
-      <transition appear appear-class="animated tada" appear-active-class="animated bounceInRight">
-        <router-view></router-view>
-      </transition>
+      <router-view></router-view>
     </template>
   </el-row>
 </template>
 
 <script>
-  import ChildrenList from '../ChildrenList'
-  export default {
-    name: 'index',
-    components: {
-      'children-list': ChildrenList
-    }
+import ChildrenList from '../ChildrenList'
+export default {
+  name: 'index',
+  components: {
+    'children-list': ChildrenList
   }
+}
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  
+
 </style>

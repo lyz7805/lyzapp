@@ -1,0 +1,2222 @@
+<template>
+	<div class="main markdown">
+		<h1>IconFont 图标</h1>
+		<ul class="icon_lists clear">
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-back_icon"></use>
+				</svg>
+				<div class="name">返回</div>
+				<div class="fontclass">#icon-back_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bankcard_icon"></use>
+				</svg>
+				<div class="name">银行卡</div>
+				<div class="fontclass">#icon-bankcard_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bag_icon"></use>
+				</svg>
+				<div class="name">包</div>
+				<div class="fontclass">#icon-bag_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-address_icon"></use>
+				</svg>
+				<div class="name">地址</div>
+				<div class="fontclass">#icon-address_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-affirm_icon"></use>
+				</svg>
+				<div class="name">确认</div>
+				<div class="fontclass">#icon-affirm_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-add_icon"></use>
+				</svg>
+				<div class="name">添加</div>
+				<div class="fontclass">#icon-add_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bar-chart_icon"></use>
+				</svg>
+				<div class="name">条形图</div>
+				<div class="fontclass">#icon-bar-chart_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-camera_icon"></use>
+				</svg>
+				<div class="name">相机</div>
+				<div class="fontclass">#icon-camera_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-cart_icon"></use>
+				</svg>
+				<div class="name">购物车</div>
+				<div class="fontclass">#icon-cart_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-classify_icon"></use>
+				</svg>
+				<div class="name">分类</div>
+				<div class="fontclass">#icon-classify_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-close_icon"></use>
+				</svg>
+				<div class="name">关闭</div>
+				<div class="fontclass">#icon-close_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-conversation_icon"></use>
+				</svg>
+				<div class="name">聊天</div>
+				<div class="fontclass">#icon-conversation_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-copy_icon"></use>
+				</svg>
+				<div class="name">复制</div>
+				<div class="fontclass">#icon-copy_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-edit_icon"></use>
+				</svg>
+				<div class="name">编辑</div>
+				<div class="fontclass">#icon-edit_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-dustbin_icon"></use>
+				</svg>
+				<div class="name">删除</div>
+				<div class="fontclass">#icon-dustbin_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-discount-coupon_icon"></use>
+				</svg>
+				<div class="name">折扣券</div>
+				<div class="fontclass">#icon-discount-coupon_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-gift_icon"></use>
+				</svg>
+				<div class="name">礼物</div>
+				<div class="fontclass">#icon-gift_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-line-chart_icon"></use>
+				</svg>
+				<div class="name">折线图</div>
+				<div class="fontclass">#icon-line-chart_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-message_icon"></use>
+				</svg>
+				<div class="name">消息</div>
+				<div class="fontclass">#icon-message_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-love_icon"></use>
+				</svg>
+				<div class="name">喜欢</div>
+				<div class="fontclass">#icon-love_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-home_icon"></use>
+				</svg>
+				<div class="name">首页</div>
+				<div class="fontclass">#icon-home_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-more_icon"></use>
+				</svg>
+				<div class="name">更多</div>
+				<div class="fontclass">#icon-more_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-my_icon"></use>
+				</svg>
+				<div class="name">我的</div>
+				<div class="fontclass">#icon-my_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-next_icon"></use>
+				</svg>
+				<div class="name">下一步</div>
+				<div class="fontclass">#icon-next_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-password_icon"></use>
+				</svg>
+				<div class="name">密码</div>
+				<div class="fontclass">#icon-password_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-phone_icon"></use>
+				</svg>
+				<div class="name">手机</div>
+				<div class="fontclass">#icon-phone_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-picture_icon"></use>
+				</svg>
+				<div class="name">图片</div>
+				<div class="fontclass">#icon-picture_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-pie-chart_icon"></use>
+				</svg>
+				<div class="name">饼状图</div>
+				<div class="fontclass">#icon-pie-chart_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-praise_icon"></use>
+				</svg>
+				<div class="name">赞</div>
+				<div class="fontclass">#icon-praise_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-reduce_icon"></use>
+				</svg>
+				<div class="name">减少</div>
+				<div class="fontclass">#icon-reduce_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-richscan_icon"></use>
+				</svg>
+				<div class="name">扫一扫</div>
+				<div class="fontclass">#icon-richscan_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-screen_icon"></use>
+				</svg>
+				<div class="name">筛选</div>
+				<div class="fontclass">#icon-screen_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-share_icon"></use>
+				</svg>
+				<div class="name">分享</div>
+				<div class="fontclass">#icon-share_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-setup_icon"></use>
+				</svg>
+				<div class="name">设置</div>
+				<div class="fontclass">#icon-setup_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-text_icon"></use>
+				</svg>
+				<div class="name">文本</div>
+				<div class="fontclass">#icon-text_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-store_icon"></use>
+				</svg>
+				<div class="name">商城</div>
+				<div class="fontclass">#icon-store_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-time_icon"></use>
+				</svg>
+				<div class="name">时间</div>
+				<div class="fontclass">#icon-time_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-transmit_icon"></use>
+				</svg>
+				<div class="name">转发</div>
+				<div class="fontclass">#icon-transmit_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-wallet_icon"></use>
+				</svg>
+				<div class="name">钱包</div>
+				<div class="fontclass">#icon-wallet_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-wifi_icon"></use>
+				</svg>
+				<div class="name">无线网</div>
+				<div class="fontclass">#icon-wifi_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-folder_icon"></use>
+				</svg>
+				<div class="name">文件夹</div>
+				<div class="fontclass">#icon-folder_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-amplification_icon"></use>
+				</svg>
+				<div class="name">放大</div>
+				<div class="fontclass">#icon-amplification_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-calendar_icon"></use>
+				</svg>
+				<div class="name">日历</div>
+				<div class="fontclass">#icon-calendar_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-label_icon"></use>
+				</svg>
+				<div class="name">标签</div>
+				<div class="fontclass">#icon-label_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-linkman-contacts_ico"></use>
+				</svg>
+				<div class="name">好友列表</div>
+				<div class="fontclass">#icon-linkman-contacts_ico</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-mute_icon"></use>
+				</svg>
+				<div class="name">禁音</div>
+				<div class="fontclass">#icon-mute_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-play_icon"></use>
+				</svg>
+				<div class="name">播放</div>
+				<div class="fontclass">#icon-play_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-service_icon"></use>
+				</svg>
+				<div class="name">客服</div>
+				<div class="fontclass">#icon-service_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-refresh_icon"></use>
+				</svg>
+				<div class="name">刷新</div>
+				<div class="fontclass">#icon-refresh_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-order_icon"></use>
+				</svg>
+				<div class="name">订单</div>
+				<div class="fontclass">#icon-order_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-red-packet_icon"></use>
+				</svg>
+				<div class="name">红包</div>
+				<div class="fontclass">#icon-red-packet_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-news_icon"></use>
+				</svg>
+				<div class="name">新闻</div>
+				<div class="fontclass">#icon-news_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-shrink_icon"></use>
+				</svg>
+				<div class="name">缩小</div>
+				<div class="fontclass">#icon-shrink_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-stick_icon"></use>
+				</svg>
+				<div class="name">置顶</div>
+				<div class="fontclass">#icon-stick_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-video_icon"></use>
+				</svg>
+				<div class="name">录像</div>
+				<div class="fontclass">#icon-video_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-sort_icon"></use>
+				</svg>
+				<div class="name">排序</div>
+				<div class="fontclass">#icon-sort_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-suspend_icon"></use>
+				</svg>
+				<div class="name">暂停</div>
+				<div class="fontclass">#icon-suspend_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-voice_icon"></use>
+				</svg>
+				<div class="name">语音</div>
+				<div class="fontclass">#icon-voice_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-volume_icon"></use>
+				</svg>
+				<div class="name">声音</div>
+				<div class="fontclass">#icon-volume_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-warning_icon"></use>
+				</svg>
+				<div class="name">注意</div>
+				<div class="fontclass">#icon-warning_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-cry"></use>
+				</svg>
+				<div class="name">哭泣</div>
+				<div class="fontclass">#icon-cry</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-delete"></use>
+				</svg>
+				<div class="name">删除</div>
+				<div class="fontclass">#icon-delete</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-remind"></use>
+				</svg>
+				<div class="name">删除</div>
+				<div class="fontclass">#icon-remind</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-Category"></use>
+				</svg>
+				<div class="name">目录</div>
+				<div class="fontclass">#icon-Category</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-back"></use>
+				</svg>
+				<div class="name">返回</div>
+				<div class="fontclass">#icon-back</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-account"></use>
+				</svg>
+				<div class="name">账户</div>
+				<div class="fontclass">#icon-account</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-add"></use>
+				</svg>
+				<div class="name">添加</div>
+				<div class="fontclass">#icon-add</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-calendar"></use>
+				</svg>
+				<div class="name">日历</div>
+				<div class="fontclass">#icon-calendar</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bags"></use>
+				</svg>
+				<div class="name">购物袋</div>
+				<div class="fontclass">#icon-bags</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-clock"></use>
+				</svg>
+				<div class="name">闹钟</div>
+				<div class="fontclass">#icon-clock</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-close"></use>
+				</svg>
+				<div class="name">关闭</div>
+				<div class="fontclass">#icon-close</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-delete1"></use>
+				</svg>
+				<div class="name">删除</div>
+				<div class="fontclass">#icon-delete1</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-favorite"></use>
+				</svg>
+				<div class="name">星级</div>
+				<div class="fontclass">#icon-favorite</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-edit"></use>
+				</svg>
+				<div class="name">编辑</div>
+				<div class="fontclass">#icon-edit</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-comments"></use>
+				</svg>
+				<div class="name">对话</div>
+				<div class="fontclass">#icon-comments</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-gifts"></use>
+				</svg>
+				<div class="name">积分</div>
+				<div class="fontclass">#icon-gifts</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-iconyinhangqiaguanli"></use>
+				</svg>
+				<div class="name">icon银行卡管理</div>
+				<div class="fontclass">#icon-iconyinhangqiaguanli</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-less"></use>
+				</svg>
+				<div class="name">下拉-打开</div>
+				<div class="fontclass">#icon-less</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-map"></use>
+				</svg>
+				<div class="name">地图</div>
+				<div class="fontclass">#icon-map</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-integral"></use>
+				</svg>
+				<div class="name">积分</div>
+				<div class="fontclass">#icon-integral</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-more"></use>
+				</svg>
+				<div class="name">下级</div>
+				<div class="fontclass">#icon-more</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-more_unfold"></use>
+				</svg>
+				<div class="name">下拉-未打开</div>
+				<div class="fontclass">#icon-more_unfold</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-refresh"></use>
+				</svg>
+				<div class="name">刷新</div>
+				<div class="fontclass">#icon-refresh</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-selected"></use>
+				</svg>
+				<div class="name">选中</div>
+				<div class="fontclass">#icon-selected</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-remind1"></use>
+				</svg>
+				<div class="name">提醒</div>
+				<div class="fontclass">#icon-remind1</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-set"></use>
+				</svg>
+				<div class="name">设置</div>
+				<div class="fontclass">#icon-set</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-smile"></use>
+				</svg>
+				<div class="name">微笑</div>
+				<div class="fontclass">#icon-smile</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-shoppingbag"></use>
+				</svg>
+				<div class="name">购物袋</div>
+				<div class="fontclass">#icon-shoppingbag</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-survey"></use>
+				</svg>
+				<div class="name">反馈问题</div>
+				<div class="fontclass">#icon-survey</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-Smile"></use>
+				</svg>
+				<div class="name">微笑</div>
+				<div class="fontclass">#icon-Smile</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-vip"></use>
+				</svg>
+				<div class="name">vip (1)</div>
+				<div class="fontclass">#icon-vip</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-dianhua"></use>
+				</svg>
+				<div class="name">电话</div>
+				<div class="fontclass">#icon-dianhua</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-wrong"></use>
+				</svg>
+				<div class="name">删除</div>
+				<div class="fontclass">#icon-wrong</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-dianhua1"></use>
+				</svg>
+				<div class="name">电话 (1)</div>
+				<div class="fontclass">#icon-dianhua1</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-fenlei"></use>
+				</svg>
+				<div class="name">分类</div>
+				<div class="fontclass">#icon-fenlei</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-gouwuchexiantiao"></use>
+				</svg>
+				<div class="name">购物车线条 (1)</div>
+				<div class="fontclass">#icon-gouwuchexiantiao</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-dingdanyiwancheng"></use>
+				</svg>
+				<div class="name">订单已完成</div>
+				<div class="fontclass">#icon-dingdanyiwancheng</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-haoping"></use>
+				</svg>
+				<div class="name">好评</div>
+				<div class="fontclass">#icon-haoping</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-dingdan"></use>
+				</svg>
+				<div class="name">订单</div>
+				<div class="fontclass">#icon-dingdan</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-huiyuan"></use>
+				</svg>
+				<div class="name">会员</div>
+				<div class="fontclass">#icon-huiyuan</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-jifen"></use>
+				</svg>
+				<div class="name">积分</div>
+				<div class="fontclass">#icon-jifen</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-liuyanjianyi"></use>
+				</svg>
+				<div class="name">留言建议</div>
+				<div class="fontclass">#icon-liuyanjianyi</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-wode"></use>
+				</svg>
+				<div class="name">我的</div>
+				<div class="fontclass">#icon-wode</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-naozhong"></use>
+				</svg>
+				<div class="name">闹钟</div>
+				<div class="fontclass">#icon-naozhong</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-shouye-shouye"></use>
+				</svg>
+				<div class="name">首页-首页</div>
+				<div class="fontclass">#icon-shouye-shouye</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-shalou"></use>
+				</svg>
+				<div class="name">沙漏</div>
+				<div class="fontclass">#icon-shalou</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-rili"></use>
+				</svg>
+				<div class="name">日历</div>
+				<div class="fontclass">#icon-rili</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-wodeerweima"></use>
+				</svg>
+				<div class="name">我的二维码</div>
+				<div class="fontclass">#icon-wodeerweima</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-xianxingtubiao-"></use>
+				</svg>
+				<div class="name">线性图标-15</div>
+				<div class="fontclass">#icon-xianxingtubiao-</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-yijianfankui"></use>
+				</svg>
+				<div class="name">意见反馈</div>
+				<div class="fontclass">#icon-yijianfankui</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-zaixiankefu"></use>
+				</svg>
+				<div class="name">在线客服</div>
+				<div class="fontclass">#icon-zaixiankefu</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-zhanghaoguanli"></use>
+				</svg>
+				<div class="name">账号管理</div>
+				<div class="fontclass">#icon-zhanghaoguanli</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-zhifeiji"></use>
+				</svg>
+				<div class="name">纸飞机</div>
+				<div class="fontclass">#icon-zhifeiji</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-activity_icon"></use>
+				</svg>
+				<div class="name">活动</div>
+				<div class="fontclass">#icon-activity_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-book_icon"></use>
+				</svg>
+				<div class="name">书籍</div>
+				<div class="fontclass">#icon-book_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-add-friends_icon"></use>
+				</svg>
+				<div class="name">添加好友</div>
+				<div class="fontclass">#icon-add-friends_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-download_icon"></use>
+				</svg>
+				<div class="name">下载</div>
+				<div class="fontclass">#icon-download_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-electricity_icon"></use>
+				</svg>
+				<div class="name">电</div>
+				<div class="fontclass">#icon-electricity_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-emoji_icon"></use>
+				</svg>
+				<div class="name">表情</div>
+				<div class="fontclass">#icon-emoji_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-idea_icon"></use>
+				</svg>
+				<div class="name">主意</div>
+				<div class="fontclass">#icon-idea_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-female_icon"></use>
+				</svg>
+				<div class="name">女</div>
+				<div class="fontclass">#icon-female_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-live_icon"></use>
+				</svg>
+				<div class="name">直播</div>
+				<div class="fontclass">#icon-live_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-male_icon"></use>
+				</svg>
+				<div class="name">男</div>
+				<div class="fontclass">#icon-male_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-list_icon"></use>
+				</svg>
+				<div class="name">列表</div>
+				<div class="fontclass">#icon-list_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-search_icon"></use>
+				</svg>
+				<div class="name">搜索</div>
+				<div class="fontclass">#icon-search_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-keyboard_icon"></use>
+				</svg>
+				<div class="name">键盘</div>
+				<div class="fontclass">#icon-keyboard_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-member_icon"></use>
+				</svg>
+				<div class="name">会员</div>
+				<div class="fontclass">#icon-member_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-water_icon"></use>
+				</svg>
+				<div class="name">水</div>
+				<div class="fontclass">#icon-water_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-upload_icon"></use>
+				</svg>
+				<div class="name">上传</div>
+				<div class="fontclass">#icon-upload_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-computer_icon"></use>
+				</svg>
+				<div class="name">电脑</div>
+				<div class="fontclass">#icon-computer_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-e-mail_icon"></use>
+				</svg>
+				<div class="name">邮件</div>
+				<div class="fontclass">#icon-e-mail_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-education_icon"></use>
+				</svg>
+				<div class="name">教育</div>
+				<div class="fontclass">#icon-education_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-credentials_icon"></use>
+				</svg>
+				<div class="name">身份证</div>
+				<div class="fontclass">#icon-credentials_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-decoration_icon"></use>
+				</svg>
+				<div class="name">奖章</div>
+				<div class="fontclass">#icon-decoration_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-heavy-rain_icon"></use>
+				</svg>
+				<div class="name">大雨</div>
+				<div class="fontclass">#icon-heavy-rain_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-fine_icon"></use>
+				</svg>
+				<div class="name">晴天</div>
+				<div class="fontclass">#icon-fine_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-intense-fall_icon"></use>
+				</svg>
+				<div class="name">暴雨</div>
+				<div class="fontclass">#icon-intense-fall_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-heavy-snow_icon"></use>
+				</svg>
+				<div class="name">大雪</div>
+				<div class="fontclass">#icon-heavy-snow_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-membership-card_icon"></use>
+				</svg>
+				<div class="name">会员卡</div>
+				<div class="fontclass">#icon-membership-card_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-medal_icon"></use>
+				</svg>
+				<div class="name">奖牌</div>
+				<div class="fontclass">#icon-medal_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-moderate-rain_icon"></use>
+				</svg>
+				<div class="name">中雨</div>
+				<div class="fontclass">#icon-moderate-rain_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-scouther_icon"></use>
+				</svg>
+				<div class="name">小雪</div>
+				<div class="fontclass">#icon-scouther_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-pan_icon"></use>
+				</svg>
+				<div class="name">铅笔</div>
+				<div class="fontclass">#icon-pan_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-printer_icon"></use>
+				</svg>
+				<div class="name">打印机</div>
+				<div class="fontclass">#icon-printer_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-overcast-sky_icon"></use>
+				</svg>
+				<div class="name">阴天</div>
+				<div class="fontclass">#icon-overcast-sky_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-moderate-snow_icon"></use>
+				</svg>
+				<div class="name">中雪</div>
+				<div class="fontclass">#icon-moderate-snow_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-shower_icon"></use>
+				</svg>
+				<div class="name">阵雨</div>
+				<div class="fontclass">#icon-shower_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-thermometer_icon"></use>
+				</svg>
+				<div class="name">温度</div>
+				<div class="fontclass">#icon-thermometer_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-spit_icon"></use>
+				</svg>
+				<div class="name">小雨</div>
+				<div class="fontclass">#icon-spit_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-thundershower_icon"></use>
+				</svg>
+				<div class="name">雷阵雨</div>
+				<div class="fontclass">#icon-thundershower_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-tool-cabinet_icon"></use>
+				</svg>
+				<div class="name">工具箱</div>
+				<div class="fontclass">#icon-tool-cabinet_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-trophy_icon"></use>
+				</svg>
+				<div class="name">奖杯</div>
+				<div class="fontclass">#icon-trophy_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-broken-sky_icon"></use>
+				</svg>
+				<div class="name">多云</div>
+				<div class="fontclass">#icon-broken-sky_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-account_book_icon"></use>
+				</svg>
+				<div class="name">account_book_icon</div>
+				<div class="fontclass">#icon-account_book_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-airplane_icon"></use>
+				</svg>
+				<div class="name">airplane_icon</div>
+				<div class="fontclass">#icon-airplane_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-air_condition_icon"></use>
+				</svg>
+				<div class="name">air_condition_icon</div>
+				<div class="fontclass">#icon-air_condition_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-alarm_clock_icon"></use>
+				</svg>
+				<div class="name">alarm_clock_icon</div>
+				<div class="fontclass">#icon-alarm_clock_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-atm_icon"></use>
+				</svg>
+				<div class="name">atm_icon</div>
+				<div class="fontclass">#icon-atm_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-alarm_icon"></use>
+				</svg>
+				<div class="name">alarm_icon</div>
+				<div class="fontclass">#icon-alarm_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bank_icon"></use>
+				</svg>
+				<div class="name">bank_icon</div>
+				<div class="fontclass">#icon-bank_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-balance_scale_icon"></use>
+				</svg>
+				<div class="name">balance_scale_icon</div>
+				<div class="fontclass">#icon-balance_scale_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-ban_barrage_icon"></use>
+				</svg>
+				<div class="name">ban_barrage_icon</div>
+				<div class="fontclass">#icon-ban_barrage_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-barrage_icon"></use>
+				</svg>
+				<div class="name">barrage_icon</div>
+				<div class="fontclass">#icon-barrage_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-batch_processing_ico"></use>
+				</svg>
+				<div class="name">batch_processing_ico</div>
+				<div class="fontclass">#icon-batch_processing_ico</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bath_towel_icon"></use>
+				</svg>
+				<div class="name">bath_towel_icon</div>
+				<div class="fontclass">#icon-bath_towel_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-beverage_icon"></use>
+				</svg>
+				<div class="name">beverage_icon</div>
+				<div class="fontclass">#icon-beverage_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bedroom_icon"></use>
+				</svg>
+				<div class="name">bedroom_icon</div>
+				<div class="fontclass">#icon-bedroom_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bike_icon"></use>
+				</svg>
+				<div class="name">bike_icon</div>
+				<div class="fontclass">#icon-bike_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-battery_charging_ico"></use>
+				</svg>
+				<div class="name">battery_charging_ico</div>
+				<div class="fontclass">#icon-battery_charging_ico</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bathroom_icon"></use>
+				</svg>
+				<div class="name">bathroom_icon</div>
+				<div class="fontclass">#icon-bathroom_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-camera_icon1"></use>
+				</svg>
+				<div class="name">camera_icon</div>
+				<div class="fontclass">#icon-camera_icon1</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-business_license_ico"></use>
+				</svg>
+				<div class="name">business_license_ico</div>
+				<div class="fontclass">#icon-business_license_ico</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-bug_icon"></use>
+				</svg>
+				<div class="name">bug_icon</div>
+				<div class="fontclass">#icon-bug_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-capsule_icon"></use>
+				</svg>
+				<div class="name">capsule_icon</div>
+				<div class="fontclass">#icon-capsule_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-boat_icon"></use>
+				</svg>
+				<div class="name">boat_icon</div>
+				<div class="fontclass">#icon-boat_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-car_icon"></use>
+				</svg>
+				<div class="name">car_icon</div>
+				<div class="fontclass">#icon-car_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-category_find_icon"></use>
+				</svg>
+				<div class="name">category_find_icon</div>
+				<div class="fontclass">#icon-category_find_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-circulation_icon"></use>
+				</svg>
+				<div class="name">circulation_icon</div>
+				<div class="fontclass">#icon-circulation_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-cold_icon"></use>
+				</svg>
+				<div class="name">cold_icon</div>
+				<div class="fontclass">#icon-cold_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-child_icon"></use>
+				</svg>
+				<div class="name">child_icon</div>
+				<div class="fontclass">#icon-child_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-code_icon"></use>
+				</svg>
+				<div class="name">code_icon</div>
+				<div class="fontclass">#icon-code_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-concentrate_icon"></use>
+				</svg>
+				<div class="name">concentrate_icon</div>
+				<div class="fontclass">#icon-concentrate_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-controller_icon"></use>
+				</svg>
+				<div class="name">controller_icon</div>
+				<div class="fontclass">#icon-controller_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-cup_icon"></use>
+				</svg>
+				<div class="name">cup_icon</div>
+				<div class="fontclass">#icon-cup_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-collect_icon"></use>
+				</svg>
+				<div class="name">collect_icon</div>
+				<div class="fontclass">#icon-collect_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-cpu_icon"></use>
+				</svg>
+				<div class="name">cpu_icon</div>
+				<div class="fontclass">#icon-cpu_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-display_off_icon"></use>
+				</svg>
+				<div class="name">display_off_icon</div>
+				<div class="fontclass">#icon-display_off_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-excel_files_icon"></use>
+				</svg>
+				<div class="name">excel_files_icon</div>
+				<div class="fontclass">#icon-excel_files_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-cook_icon"></use>
+				</svg>
+				<div class="name">cook_icon</div>
+				<div class="fontclass">#icon-cook_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-droplight_icon"></use>
+				</svg>
+				<div class="name">droplight_icon</div>
+				<div class="fontclass">#icon-droplight_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-fast_forward_icon"></use>
+				</svg>
+				<div class="name">fast_forward_icon</div>
+				<div class="fontclass">#icon-fast_forward_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-fast_reverse_icon"></use>
+				</svg>
+				<div class="name">fast_reverse_icon</div>
+				<div class="fontclass">#icon-fast_reverse_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-down_arrow_icon"></use>
+				</svg>
+				<div class="name">down_arrow_icon</div>
+				<div class="fontclass">#icon-down_arrow_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-flashlight_icon"></use>
+				</svg>
+				<div class="name">flashlight_icon</div>
+				<div class="fontclass">#icon-flashlight_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-forbid_icon"></use>
+				</svg>
+				<div class="name">forbid_icon</div>
+				<div class="fontclass">#icon-forbid_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-game_icon"></use>
+				</svg>
+				<div class="name">game_icon</div>
+				<div class="fontclass">#icon-game_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-fruit_icon"></use>
+				</svg>
+				<div class="name">fruit_icon</div>
+				<div class="fontclass">#icon-fruit_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-fitness_icon"></use>
+				</svg>
+				<div class="name">fitness_icon</div>
+				<div class="fontclass">#icon-fitness_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-fire_hydrant_icon"></use>
+				</svg>
+				<div class="name">fire_hydrant_icon</div>
+				<div class="fontclass">#icon-fire_hydrant_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-hospital_icon"></use>
+				</svg>
+				<div class="name">hospital_icon</div>
+				<div class="fontclass">#icon-hospital_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-government_icon"></use>
+				</svg>
+				<div class="name">government_icon</div>
+				<div class="fontclass">#icon-government_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-ice_box_icon"></use>
+				</svg>
+				<div class="name">ice_box_icon</div>
+				<div class="fontclass">#icon-ice_box_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-hotel_icon"></use>
+				</svg>
+				<div class="name">hotel_icon</div>
+				<div class="fontclass">#icon-hotel_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-integral_icon"></use>
+				</svg>
+				<div class="name">integral_icon</div>
+				<div class="fontclass">#icon-integral_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-key_icon"></use>
+				</svg>
+				<div class="name">key_icon</div>
+				<div class="fontclass">#icon-key_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-law_icon"></use>
+				</svg>
+				<div class="name">law_icon</div>
+				<div class="fontclass">#icon-law_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-link_icon"></use>
+				</svg>
+				<div class="name">link_icon</div>
+				<div class="fontclass">#icon-link_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-loading_icon"></use>
+				</svg>
+				<div class="name">loading_icon</div>
+				<div class="fontclass">#icon-loading_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-menu_icon"></use>
+				</svg>
+				<div class="name">menu_icon</div>
+				<div class="fontclass">#icon-menu_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-map_icon"></use>
+				</svg>
+				<div class="name">map_icon</div>
+				<div class="fontclass">#icon-map_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-money_icon"></use>
+				</svg>
+				<div class="name">money_icon</div>
+				<div class="fontclass">#icon-money_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-mouse_icon"></use>
+				</svg>
+				<div class="name">mouse_icon</div>
+				<div class="fontclass">#icon-mouse_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-network_icon"></use>
+				</svg>
+				<div class="name">network_icon</div>
+				<div class="fontclass">#icon-network_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-organization_icon"></use>
+				</svg>
+				<div class="name">organization_icon</div>
+				<div class="fontclass">#icon-organization_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-pet_icon"></use>
+				</svg>
+				<div class="name">pet_icon</div>
+				<div class="fontclass">#icon-pet_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-ppt_files_icon"></use>
+				</svg>
+				<div class="name">ppt_files_icon</div>
+				<div class="fontclass">#icon-ppt_files_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-qr_code_icon"></use>
+				</svg>
+				<div class="name">qr_code_icon</div>
+				<div class="fontclass">#icon-qr_code_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-plug_icon"></use>
+				</svg>
+				<div class="name">plug_icon</div>
+				<div class="fontclass">#icon-plug_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-repeal_icon"></use>
+				</svg>
+				<div class="name">repeal_icon</div>
+				<div class="fontclass">#icon-repeal_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-quit_icon"></use>
+				</svg>
+				<div class="name">quit_icon</div>
+				<div class="fontclass">#icon-quit_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-resource_icon"></use>
+				</svg>
+				<div class="name">resource_icon</div>
+				<div class="fontclass">#icon-resource_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-restaurant_icon"></use>
+				</svg>
+				<div class="name">restaurant_icon</div>
+				<div class="fontclass">#icon-restaurant_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-rule_icon"></use>
+				</svg>
+				<div class="name">rule_icon</div>
+				<div class="fontclass">#icon-rule_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-router_icon"></use>
+				</svg>
+				<div class="name">router_icon</div>
+				<div class="fontclass">#icon-router_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-rocket_icon"></use>
+				</svg>
+				<div class="name">rocket_icon</div>
+				<div class="fontclass">#icon-rocket_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-salary_icon"></use>
+				</svg>
+				<div class="name">salary_icon</div>
+				<div class="fontclass">#icon-salary_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-server_icon"></use>
+				</svg>
+				<div class="name">server_icon</div>
+				<div class="fontclass">#icon-server_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-sd_card_icon"></use>
+				</svg>
+				<div class="name">sd_card_icon</div>
+				<div class="fontclass">#icon-sd_card_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-show_icon"></use>
+				</svg>
+				<div class="name">show_icon</div>
+				<div class="fontclass">#icon-show_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-shutdown_icon"></use>
+				</svg>
+				<div class="name">shutdown_icon</div>
+				<div class="fontclass">#icon-shutdown_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-shield_icon"></use>
+				</svg>
+				<div class="name">shield_icon</div>
+				<div class="fontclass">#icon-shield_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-snacks_icon"></use>
+				</svg>
+				<div class="name">snacks_icon</div>
+				<div class="fontclass">#icon-snacks_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-speed_icon"></use>
+				</svg>
+				<div class="name">speed_icon</div>
+				<div class="fontclass">#icon-speed_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-steamer_icon"></use>
+				</svg>
+				<div class="name">steamer_icon</div>
+				<div class="fontclass">#icon-steamer_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-steel_safe_icon"></use>
+				</svg>
+				<div class="name">steel_safe_icon</div>
+				<div class="fontclass">#icon-steel_safe_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-tablet_computer_icon"></use>
+				</svg>
+				<div class="name">tablet_computer_icon</div>
+				<div class="fontclass">#icon-tablet_computer_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-tailor_icon"></use>
+				</svg>
+				<div class="name">tailor_icon</div>
+				<div class="fontclass">#icon-tailor_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-timer_icon"></use>
+				</svg>
+				<div class="name">timer_icon</div>
+				<div class="fontclass">#icon-timer_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-toy_icon"></use>
+				</svg>
+				<div class="name">toy_icon</div>
+				<div class="fontclass">#icon-toy_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-train_icon"></use>
+				</svg>
+				<div class="name">train_icon</div>
+				<div class="fontclass">#icon-train_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-transition_icon"></use>
+				</svg>
+				<div class="name">transition_icon</div>
+				<div class="fontclass">#icon-transition_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-translate_icon"></use>
+				</svg>
+				<div class="name">translate_icon</div>
+				<div class="fontclass">#icon-translate_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-tree_icon"></use>
+				</svg>
+				<div class="name">tree_icon</div>
+				<div class="fontclass">#icon-tree_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-tv_icon"></use>
+				</svg>
+				<div class="name">tv_icon</div>
+				<div class="fontclass">#icon-tv_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-u_disk_icon"></use>
+				</svg>
+				<div class="name">u_disk_icon</div>
+				<div class="fontclass">#icon-u_disk_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-umbrella_icon"></use>
+				</svg>
+				<div class="name">umbrella_icon</div>
+				<div class="fontclass">#icon-umbrella_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-up_arrow_icon"></use>
+				</svg>
+				<div class="name">up_arrow_icon</div>
+				<div class="fontclass">#icon-up_arrow_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-wait_sending_icon"></use>
+				</svg>
+				<div class="name">wait_sending_icon</div>
+				<div class="fontclass">#icon-wait_sending_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-warehouse_icon"></use>
+				</svg>
+				<div class="name">warehouse_icon</div>
+				<div class="fontclass">#icon-warehouse_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-watermelon_icon"></use>
+				</svg>
+				<div class="name">watermelon_icon</div>
+				<div class="fontclass">#icon-watermelon_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-wireframe_icon"></use>
+				</svg>
+				<div class="name">wireframe_icon</div>
+				<div class="fontclass">#icon-wireframe_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-word_files_icon"></use>
+				</svg>
+				<div class="name">word_files_icon</div>
+				<div class="fontclass">#icon-word_files_icon</div>
+			</li>
+	
+			<li>
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-workbench_icon"></use>
+				</svg>
+				<div class="name">workbench_icon</div>
+				<div class="fontclass">#icon-workbench_icon</div>
+			</li>
+	
+		</ul>
+	
+		<h2 id="symbol-">symbol引用</h2>
+		<hr>
+	
+		<p>这是一种全新的使用方式，应该说这才是未来的主流，也是平台目前推荐的用法。相关介绍可以参考这篇
+			<a href="">文章</a>
+			这种用法其实是做了一个svg的集合，与另外两种相比具有如下特点：</p>
+		<ul>
+			<li>支持多色图标了，不再受单色限制。</li>
+			<li>通过一些技巧，支持像字体那样，通过
+				<code>font-size</code>,
+				<code>color</code>来调整样式。</li>
+			<li>兼容性较差，支持 ie9+,及现代浏览器。</li>
+			<li>浏览器渲染svg的性能一般，还不如png。</li>
+		</ul>
+		<p>使用步骤如下：</p>
+		<h3 id="-symbol-">第一步：引入项目下面生成的symbol代码：</h3>
+		<pre><code class="lang-js hljs javascript"><span class="hljs-comment">&lt;script src="./iconfont.js"&gt;&lt;/script&gt;</span></code></pre>
+		<h3 id="-css-">第二步：加入通用css代码（引入一次就行）：</h3>
+		<pre><code class="lang-js hljs javascript">&lt;style type=<span class="hljs-string">"text/css"</span>&gt;.icon {width: <span class="hljs-number">1</span>em; height: <span class="hljs-number">1</span>em;vertical-align: <span class="hljs-number">-0.15</span>em;fill: currentColor;overflow: hidden;}&lt;<span class="hljs-regexp">/style&gt;</span></code></pre>
+		<h3 id="-">第三步：挑选相应图标并获取类名，应用于页面：</h3>
+		<pre><code class="lang-js hljs javascript">&lt;svg <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"icon"</span> aria-hidden=<span class="hljs-string">"true"</span>&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-xxx"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span></span>&lt;<span class="hljs-regexp">/svg&gt;</span></code></pre>
+	</div>
+</template>
+
+<style scoped>
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	ul,
+	ol {
+		list-style: none;
+	}
+	
+	.main {
+		padding: 0;
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	.main h1 {
+		font-size: 36px;
+		color: #333;
+		text-align: left;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #eee;
+	}
+	
+	.icon_lists {
+		width: 100% !important;
+	}
+	
+	.icon_lists li {
+		float: left;
+		width: 100px;
+		height: 180px;
+		text-align: center;
+		list-style: none !important;
+	}
+	
+	.icon_lists .icon {
+		font-size: 42px;
+		line-height: 100px;
+		margin: 10px 0;
+		color: #333;
+		-webkit-transition: font-size 0.25s ease-out 0s;
+		-moz-transition: font-size 0.25s ease-out 0s;
+		transition: font-size 0.25s ease-out 0s;
+	}
+	
+	.icon_lists .icon:hover {
+		font-size: 80px;
+	}
+	
+	.markdown {
+		color: #666;
+		font-size: 14px;
+		line-height: 1.8;
+	}
+	
+	.highlight {
+		line-height: 1.5;
+	}
+	
+	.markdown img {
+		vertical-align: middle;
+		max-width: 100%;
+	}
+	
+	.markdown h1 {
+		color: #404040;
+		font-weight: 500;
+		line-height: 40px;
+		margin-bottom: 24px;
+	}
+	
+	.markdown h2,
+	.markdown h3,
+	.markdown h4,
+	.markdown h5,
+	.markdown h6 {
+		color: #404040;
+		margin: 1.6em 0 0.6em 0;
+		font-weight: 500;
+		clear: both;
+	}
+	
+	.markdown hr {
+		height: 1px;
+		border: 0;
+		background: #e9e9e9;
+		margin: 16px 0;
+		clear: both;
+	}
+	
+	.markdown p,
+	.markdown pre {
+		margin: 1em 0;
+	}
+	
+	.markdown>p,
+	.markdown>blockquote,
+	.markdown>.highlight,
+	.markdown>ol,
+	.markdown>ul {
+		width: 80%;
+	}
+	
+	.markdown ul>li {
+		list-style: circle;
+	}
+	
+	.markdown>ul li,
+	.markdown blockquote ul>li {
+		margin-left: 10px;
+		padding-left: 4px;
+	}
+	
+	.markdown>ul li p,
+	.markdown>ol li p {
+		margin: 0.6em 0;
+	}
+	
+	.markdown ol>li {
+		list-style: decimal;
+	}
+	
+	.markdown>ol li,
+	.markdown blockquote ol>li {
+		margin-left: 10px;
+		padding-left: 4px;
+	}
+	
+	.markdown code {
+		margin: 0 3px;
+		padding: 0 5px;
+		background: #eee;
+		border-radius: 3px;
+	}
+	
+	.markdown pre {
+		border-radius: 6px;
+		background: #f7f7f7;
+		padding: 20px;
+	}
+	
+	.markdown pre code {
+		border: none;
+		background: #f7f7f7;
+		margin: 0;
+	}
+	
+	.markdown strong,
+	.markdown b {
+		font-weight: 600;
+	}
+	
+	.markdown blockquote {
+		font-size: 90%;
+		color: #999;
+		border-left: 4px solid #e9e9e9;
+		padding-left: 0.8em;
+		margin: 1em 0;
+		font-style: italic;
+	}
+	
+	.markdown blockquote p {
+		margin: 0;
+	}
+</style>

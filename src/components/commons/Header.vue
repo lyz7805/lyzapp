@@ -1,39 +1,52 @@
 <template>
   <div id="main-header">
-    <el-menu theme="dark" default-active="1" mode="horizontal" @select="">
-      <el-col :xs="{span:18, push:3}" :sm="{span:5, push:0}" :md="4" :lg="3" class="logo">
+    <el-menu theme="dark" default-active="1" mode="horizontal">
+      <!--<el-col :xs="{span:18, push:3}" :sm="{span:5, push:0}" :md="4" :lg="3" class="logo">
+                              </el-col>
+                              <el-col :xs="{span:3}" :sm="{span:4, push:15}" :md="{span:4, push:16}" :lg="{span:4, push:17}">
+                              </el-col>
+                              <el-col :xs="24" :sm="{span:15, pull:4}" :md="{span:16, pull:4}" :lg="{span:17, pull:4}">
+                              </el-col>-->
+      <li index="1" class="logo el-col el-col-24 el-col-xs-18 el-col-xs-push-3 el-col-sm-5 el-col-sm-push-0 el-col-md-4 el-col-lg-3">
         <icon name="icon-classify_icon" class="animated infinite rotateIn"></icon> {{ title }}
-      </el-col>
-      <el-col :xs="{span:3}" :sm="{span:4, push:15}" :md="{span:4, push:16}" :lg="{span:4, push:17}">
-        <el-menu-item index="3" class="right-block">
-          <el-popover ref="userinfo" placement="bottom" :visible-arrow="false" popper-class="userinfo" width="100" trigger="hover">
-            <div></div>
-            <div v-text="time"></div>
-            <div>
-              <el-button type="text" size="" @click="loginOut()">
-                <i class="fa fa-sign-out"></i> 退出
-              </el-button>
-            </div>
-          </el-popover>
-          {{ time }}
-          <el-button type="text" v-popover:userinfo icon="user" size="large">
-            <icon name="icon-my_icon"></icon>
-          </el-button>
-        </el-menu-item>
-      </el-col>
-      <el-col :xs="24" :sm="{span:15, pull:4}" :md="{span:16, pull:4}" :lg="{span:17, pull:4}">
-        <el-menu-item index="2">
-          <el-button type="text" @click="$router.go(-1)" size="small" title="点击可后退">
-            <i class="fa fa-long-arrow-left"></i>
-          </el-button>
-          <el-button type="text" @click="$router.go(1)" size="small" title="点击可前进">
-            <i class="fa fa-long-arrow-right"></i>
-          </el-button>
-          <el-button type="text" @click="$router.go(0)" size="small" title="重新加载此网页">
-            <icon name="icon-refresh_icon"></icon>
-          </el-button>
-        </el-menu-item>
-      </el-col>
+      </li>
+      <el-menu-item index="4" class="right-block">
+        <el-popover ref="userinfo" placement="bottom" :visible-arrow="false" popper-class="userinfo" width="100" trigger="hover">
+          <div></div>
+          <div v-text="time"></div>
+          <div>
+            <el-button type="text" size="" @click="logout()">
+              <icon name="icon-quit_icon"></icon> 退出
+            </el-button>
+          </div>
+        </el-popover>
+        <el-button type="text" v-popover:userinfo icon="user" size="large">
+          <icon name="icon-my_icon"></icon>
+        </el-button>
+      </el-menu-item>
+      <li index="3" class="right-block">
+        <el-button type="text" @click="screenfullToggle" size="large" title="">
+          <transition name="fade" mode="out-in">
+            <icon name="icon-amplification_icon" v-if="!isFullscreen"></icon>
+            <icon name="icon-shrink_icon" v-else></icon>
+          </transition>
+        </el-button>
+      </li>
+      <li index="2">
+        <el-button type="text" @click="$router.go(-1)" size="large" title="点击可后退">
+          <i class="fa fa-long-arrow-left"></i>
+        </el-button>
+      </li>
+      <li>
+        <el-button type="text" @click="$router.go(1)" size="large" title="点击可前进">
+          <i class="fa fa-long-arrow-right"></i>
+        </el-button>
+      </li>
+      <li>
+        <el-button type="text" @click="$router.go(0)" size="large" title="重新加载此网页">
+          <icon name="icon-refresh_icon"></icon>
+        </el-button>
+      </li>
     </el-menu>
   </div>
 </template>
@@ -43,6 +56,8 @@
     data () {
       return {
         title: '管理面板',
+        isFullscreen: false,
+        screenfullIcon: 'icon-amplification_icon',
         time: ''
       }
     },
@@ -59,7 +74,7 @@
       }
     },
     methods: {
-      loginOut () {
+      logout () {
         this.$http.get('/general/relogin.php').then(response => {
           this.$message({
             message: '您已安全推出！',
@@ -68,6 +83,22 @@
           this.$router.push('/login')
           this.$store.commit('loginOut')
         })
+      },
+      screenfullToggle () {
+        // console.log(this.$screenfull)
+        if (this.$screenfull.enabled) {
+          this.$screenfull.toggle()
+          this.$screenfull.onchange(() => {
+            console.log(this.isFullscreen)
+            this.isFullscreen = this.$screenfull.isFullscreen
+          })
+        } else {
+          this.$message({
+            type: 'warning',
+            showClose: true,
+            message: '你的浏览器不支持全屏，为了得到更好的使用体验，请升级浏览器，或更换其他浏览器（Edge、Google Chrome等）'
+          })
+        }
       }
     }
   }

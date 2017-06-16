@@ -13,7 +13,8 @@ import Cpxl from '@/pages/cpgl/Cpxl'
 import Cpxlzd from '@/pages/cpgl/Cpxlzd'
 import Workflow from '@/pages/workflow/Index'
 import Flowdetpriv from '@/pages/workflow/Flowdetpriv.vue'
-// import Pdf from '@/components/pdfjs/web/viewer.vue'
+import User from '@/pages/user/Index'
+import Iconfont from '@/pages/user/iconfont'
 import Pdf from '@/components/pdfjs/Pdfjs.vue'
 
 Vue.use(Router)
@@ -97,16 +98,16 @@ export default new Router({
     path: '/user',
     name: '用户管理',
     iconCls: 'icon-account',
-    component: Cpgl,
+    component: User,
     children: [{
       path: 'userinfo',
       name: '用户信息',
       iconCls: 'icon-my_icon',
       component: Pdf
     }, {
-      path: 'userinfo1',
-      name: '用户信息b',
-      component: Home
+      path: 'iconfont',
+      name: '图标',
+      component: Iconfont
     }, {
       path: 'wllba',
       name: '物料类别b',
