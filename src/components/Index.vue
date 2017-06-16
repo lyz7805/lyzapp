@@ -7,11 +7,12 @@
     </h5>
     <el-row>
       <template v-for="(item, index) in $router.options.routes" v-if="item.path !== '/' && (item.isShow == undefined || item.isShow == true)">
-        <el-col :xs="6" :sm="4" :lg="3" :key="index" class="list-item">
+        <el-col :xs="12" :sm="6" :lg="4" :key="index" class="list-item">
           <div class="index">
             <router-link class="to" :to="item.path">
               <!--<img :src="img">-->
-              <i class="icon" :class="item.iconCls ? item.iconCls : 'fa fa-file-text-o'"></i>
+              <!--<i class="icon" :class="item.iconCls ? item.iconCls : 'fa fa-file-text-o'"></i>-->
+              <icon :name="item.iconCls ? item.iconCls : 'icon-Category'"></icon>
               <div>
                 <!--<i :class="item.iconCls"></i> -->{{ item.name }}
               </div>

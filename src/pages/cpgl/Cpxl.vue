@@ -1,5 +1,9 @@
 <template>
   <el-row>
+    <el-col :span="23">
+      <el-button class="right-block" type="text" icon="plus" size="small" @click="handleAdd">增加产品系列</el-button>
+    </el-col>
+    <el-col :span="1"></el-col>
     <el-table :data="data" border max-height="600">
       <el-table-column type="index" width="80px" align="center"></el-table-column>
       <!--<el-table-column prop="lbmc" label="产品类别" width="" align="center"></el-table-column>-->
@@ -63,6 +67,10 @@
         }).catch(() => {
           this.cplb = []
         })
+      },
+      handleAdd () {
+        this.dialogVisible = true
+        this.form = {}
       },
       handleEdit (index, row) {
         // console.log(index, row)

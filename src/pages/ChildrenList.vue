@@ -1,12 +1,12 @@
 <template>
   <el-row>
     <h5>{{ $route.name }}:</h5>
-    <el-row>
+    <transition-group tag="el-row" appear appear-class="animated fadeInUpBig" appear-active-class="animated fadeInUpBig">
       <template v-for="(item, index) in children">
         <el-col :xs="12" :sm="6" :lg="4" :key="index" class="list-item">
           <div class="index">
             <router-link class="to" :to="$route.path + '/' + item.path">
-              <i class="icon" :class="item.iconCls ? item.iconCls : 'fa fa-file-o'"></i>
+              <icon :name="item.iconCls ? item.iconCls : 'icon-zhifeiji'"></icon>
               <div>
                 {{ item.name }}
               </div>
@@ -14,7 +14,7 @@
           </div>
         </el-col>
       </template>
-    </el-row>
+    </transition-group>
   </el-row>
 </template>
 

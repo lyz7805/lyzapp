@@ -1,4 +1,6 @@
 build/*.js
 config/*.js
+static/*
 src/components/pdfjs/web/*
 src/components/pdfjs/viewer.js
+src/assets/js/iconfont.js

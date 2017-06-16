@@ -2,7 +2,7 @@
   <div id="main-header">
     <el-menu theme="dark" default-active="1" mode="horizontal" @select="">
       <el-col :xs="{span:18, push:3}" :sm="{span:5, push:0}" :md="4" :lg="3" class="logo">
-        <i class="fa fa-tachometer"></i> {{ title }}
+        <icon name="icon-classify_icon" class="animated infinite rotateIn"></icon> {{ title }}
       </el-col>
       <el-col :xs="{span:3}" :sm="{span:4, push:15}" :md="{span:4, push:16}" :lg="{span:4, push:17}">
         <el-menu-item index="3" class="right-block">
@@ -17,7 +17,7 @@
           </el-popover>
           {{ time }}
           <el-button type="text" v-popover:userinfo icon="user" size="large">
-            <i class="fa fa-user"></i>
+            <icon name="icon-my_icon"></icon>
           </el-button>
         </el-menu-item>
       </el-col>
@@ -30,7 +30,7 @@
             <i class="fa fa-long-arrow-right"></i>
           </el-button>
           <el-button type="text" @click="$router.go(0)" size="small" title="重新加载此网页">
-            <i class="fa fa-refresh"></i>
+            <icon name="icon-refresh_icon"></icon>
           </el-button>
         </el-menu-item>
       </el-col>

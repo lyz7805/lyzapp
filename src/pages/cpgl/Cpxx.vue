@@ -172,9 +172,7 @@
         if (xlid !== null) {
           params.xlid = xlid
         }
-        return this.$http.get(url, {
-          params
-        })
+        return this.$http.get(url, { params })
       },
       getCpxxlb () {
         var url = '/lyzapp/api/cpgl/cpxxlb.php'
@@ -294,6 +292,10 @@
   .card-body .radio:hover {
     /*border-bottom: 1px solid #f00;*/
     background-color: #20a0ff
+  }
+  
+  .card-body .radio.is-disabled:hover {
+    background-color: #ffffff
   }
   
   .card-body .radio .el-radio__input input,

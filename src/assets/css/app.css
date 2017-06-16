@@ -23,7 +23,8 @@
     display: block;
     float: right !important;
   }
-#main-header .logo {
+
+  #main-header .logo {
     height: 60px;
     padding: 15px;
     line-height: 30px;
@@ -38,6 +39,7 @@
       border-right: 1px solid #fff;
     }
   }
+
   #main-body .aside-menu-warpper,
   #main-body .main-section,
   #main-body .main-section .section {
@@ -60,6 +62,13 @@
     overflow: auto;
     padding: 16px 8px;
     box-sizing: border-box
+  }
+
+  .el-menu-item svg.icon,
+  .el-submenu svg.icon {
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: 8px
   }
 
   .el-menu-item i.fa,
@@ -93,14 +102,16 @@
     transition: color 250ms linear
   }
 
-  .list-item .index .to i {
+  .list-item .index .to i,
+  .list-item .index .to svg.icon {
     font-size: 2.5em;
     color: #1d90e6;
     transition: color 250ms linear
   }
 
   .list-item .index:hover .to,
-  .list-item .index:hover .to i {
+  .list-item .index:hover .to i,
+  .list-item .index:hover .to svg.icon {
     color: #8BC34A;
   }
 
@@ -108,7 +119,12 @@
     margin-top: 10px
   }
 
-  .table-condensed tbody>tr>td>.cell, .table-condensed tbody>tr>th>.cell, .table-condensed tfoot>tr>td>.cell, .table-condensed tfoot>tr>th>.cell, .table-condensed thead>tr>td>.cell, .table-condensed thead>tr>th>.cell {
+  .table-condensed tbody>tr>td>.cell,
+  .table-condensed tbody>tr>th>.cell,
+  .table-condensed tfoot>tr>td>.cell,
+  .table-condensed tfoot>tr>th>.cell,
+  .table-condensed thead>tr>td>.cell,
+  .table-condensed thead>tr>th>.cell {
     padding-left: 8px;
     padding-right: 8px;
     font-size: 0.9em

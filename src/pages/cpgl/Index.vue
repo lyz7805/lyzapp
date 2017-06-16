@@ -4,7 +4,12 @@
       <children-list></children-list>
     </template>
     <template v-else>
-      <router-view></router-view>
+      <transition name="custom-classes-transition" enter-class="animated tada" enter-active-class="animated bounceInRight">
+        <router-view></router-view>
+      </transition>
+      <transition appear appear-class="animated tada" appear-active-class="animated bounceInRight">
+        <router-view></router-view>
+      </transition>
     </template>
   </el-row>
 </template>
