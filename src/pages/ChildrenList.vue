@@ -20,7 +20,7 @@
 
 <script>
   export default {
-    name: 'children-list',
+    name: 'ChildrenList',
     data () {
       return {
         children: []
@@ -33,10 +33,12 @@
     },
     created () {
       this.setChildren()
+      console.log(this.$route)
     },
     methods: {
       setChildren () {
-        var routes = this.$router.options.routes
+        var routes = this.$router.options.routes[0].children
+        console.log(routes)
         for (var index = 0; index < routes.length; index++) {
           if (this.$route.path === routes[index].path) {
             this.children = routes[index].children
@@ -46,7 +48,6 @@
       }
     }
   }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

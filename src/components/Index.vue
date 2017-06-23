@@ -6,7 +6,7 @@
       </span>
     </h5>
     <transition-group tag="el-row" class="animated fadeIn">
-      <template v-for="(item, index) in $router.options.routes" v-if="item.path !== '/' && (item.isShow == undefined || item.isShow == true)">
+      <template v-for="(item, index) in $router.options.routes[0].children" v-if="item.path !== '/' && (item.isShow == undefined || item.isShow == true)">
         <el-col :xs="12" :sm="6" :lg="4" :key="index" class="list-item">
           <div class="index">
             <router-link class="to" :to="item.path">

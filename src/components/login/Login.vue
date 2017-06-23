@@ -1,20 +1,20 @@
 <template>
   <el-row id="login">
-    <el-form ref="login_form" class="login_form animated zoomIn" name="form1" method="post" label-width="0" label-position="left" autocomplete="on">
-      <img src="/static/images/logo.png" class="logo animated tada">
+    <el-form ref="login_form" class="login_form animated zoomIn" name="login_form" label-width="0" label-position="left">
+      <img src="/static/images/logo.png" class="logo animated">
       <el-form-item class="input-wrap">
         <icon name="icon-my_icon" class="animated"></icon>
-        <el-input type="text" size="small" id="name" name="UNAME" :maxlength="20" auto-complete autofocus v-model="uname" placeholder="请输入用户名"></el-input>
+        <el-input type="text" size="small" id="name" name="UNAME" :maxlength="20" auto-complete v-model="uname" placeholder="请输入用户名"></el-input>
       </el-form-item>
       <el-form-item class="input-wrap">
         <icon name="icon-password_icon" class="animated"></icon>
-        <el-input type="password" size="small" id="password" name="PASSWORD" auto-complete autofocus v-model="password" placeholder="请输入密码"></el-input>
+        <el-input type="password" size="small" id="password" name="PASSWORD" auto-complete v-model="password" placeholder="请输入密码"></el-input>
       </el-form-item>
       <el-form-item style="display:none;">
         <el-input type="hidden" name="encode_type" v-model="encode_type"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" id="submit" class="login_btn" @click="loginIn()">登录
+        <el-button type="primary" id="submit" class="login_btn" @click="login">登录
         </el-button>
       </el-form-item>
     </el-form>
@@ -36,40 +36,54 @@
         this.$router.push('/')
       }
     },
-    created () {
-      var unameCookie = document.cookie.match('(^|;) ?' + 'USER_NAME_COOKIE' + '=([^;]*)(;|$)')
-      this.uname = (unameCookie ? unameCookie[2] : '')
+    mounted () {
+      this.uname = this.$cookies.get('USER_NAME_COOKIE')
     },
-    watch: {
-      password () {
-        // console.log(this.base64Encode(this.password))
+    computed: {
+      base64Pwd () {
+        var base64Pwd = this.password
+        if (this.encode_type === 1 && base64Pwd !== '') {
+          base64Pwd = window.btoa(base64Pwd)
+        }
+        return base64Pwd
       }
     },
     methods: {
-      base64Encode (str) {
-        return window.btoa(str)
-      },
-      loginIn () {
-        var base64Pwd = this.password
-        if (this.encode_type === 1 && base64Pwd !== '') {
-          base64Pwd = this.base64Encode(base64Pwd)
-        }
+      login () {
+        var logining = this.$loading({
+          target: '#login>form',
+          lock: true,
+          text: '登录中...',
+          customClass: 'logining'
+        })
+        console.log(logining)
         this.$http.get('/logincheck.php', {
           params: {
             UNAME: this.uname,
-            PASSWORD: base64Pwd,
+            PASSWORD: this.base64Pwd,
             encode_type: this.encode_type
           }
-        }).then(response => {
-          console.log(response)
-          this.$router.push('/')
+        }).then(() => {
+          setTimeout(() => {
+            this.$http.get('/lyzapp/api/isLogin.php').then(res => {
+              console.log(res)
+              if (res.data === true) {
+                this.$router.push('/')
+              } else {
+                this.$message({
+                  type: 'warning',
+                  message: '密码错误，请重新登录'
+                })
+              }
+              logining.close()
+            })
+          }, 1000)
         }).catch(err => {
           console.log(err)
         })
       }
     }
   }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -104,6 +118,13 @@
     margin: 10px auto
   }
   
+  #login .logo:hover {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+  }
+  
   #login .input-wrap {
     width: 300px;
     margin: 24px auto;
@@ -111,15 +132,11 @@
   
   #login .input-wrap .el-form-item__content {
     margin-left: 0px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    background: transparent;
-    box-sizing: content-box;
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 3px;*/
+    /*background: transparent;*/
+    /*box-sizing: content-box;*/
     vertical-align: middle;
-  }
-  
-  #login .input-wrap .el-form-item__content:hover {
-    border-color: #8391a5
   }
   
   #login .input-wrap .el-form-item__content:hover svg.icon {
@@ -130,21 +147,26 @@
   }
   
   #login .input-wrap .el-form-item__content svg.icon {
-    width: 50px;
+    width: 36px;
+    height: 18px;
+    vertical-align: middle;
     color: #2196f3
   }
   
   #login .input-wrap .el-form-item__content .el-input {
-    width: 240px
+    width: 254px
   }
   
   #login .input-wrap .el-form-item__content .el-input input {
-    border: none;
-    padding: 0;
     background: transparent
   }
   
   .login_btn {
     width: 300px
+  }
+  
+  .logining {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 50%
   }
 </style>

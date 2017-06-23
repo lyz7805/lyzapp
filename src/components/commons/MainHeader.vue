@@ -1,12 +1,6 @@
 <template>
   <div id="main-header">
     <el-menu theme="dark" default-active="1" mode="horizontal">
-      <!--<el-col :xs="{span:18, push:3}" :sm="{span:5, push:0}" :md="4" :lg="3" class="logo">
-                              </el-col>
-                              <el-col :xs="{span:3}" :sm="{span:4, push:15}" :md="{span:4, push:16}" :lg="{span:4, push:17}">
-                              </el-col>
-                              <el-col :xs="24" :sm="{span:15, pull:4}" :md="{span:16, pull:4}" :lg="{span:17, pull:4}">
-                              </el-col>-->
       <li index="1" class="logo el-col el-col-24 el-col-xs-18 el-col-xs-push-3 el-col-sm-5 el-col-sm-push-0 el-col-md-4 el-col-lg-3">
         <icon name="icon-classify_icon" class="animated infinite rotateIn"></icon> {{ title }}
       </li>
@@ -52,7 +46,7 @@
 </template>
 <script>
   export default {
-    name: 'header',
+    name: 'MainHeader',
     data () {
       return {
         title: '管理面板',

@@ -1,125 +1,163 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Index'
-import Login from '@/pages/login/Login'
-import Wlxx from '@/pages/wlxx/Index'
-import Wlml from '@/pages/wlxx/Wlml'
-import Wllb from '@/pages/wlxx/Wllb'
-import Jldw from '@/pages/wlxx/Jldw'
-import Cpgl from '@/pages/cpgl/Index'
-import Cpxx from '@/pages/cpgl/Cpxx'
-import Cplb from '@/pages/cpgl/Cplb'
-import Cpxl from '@/pages/cpgl/Cpxl'
-import Cpxlzd from '@/pages/cpgl/Cpxlzd'
-import Workflow from '@/pages/workflow/Index'
-import Flowdetpriv from '@/pages/workflow/Flowdetpriv.vue'
-import User from '@/pages/user/Index'
-import Iconfont from '@/pages/user/iconfont'
-import Pdf from '@/components/pdfjs/Pdfjs.vue'
+
+var Home = resolve => require.ensure([], () => resolve(require('@/components/Home')))
+var HomeIndex = resolve => require.ensure([], () => resolve(require('@/components/Index')))
+var Login = resolve => require.ensure([], () => resolve(require('@/components/login/Login')))
+
+var Wlxx = resolve => require.ensure([], () => resolve(require('@/pages/Index')), 'wlxx')
+var Wlml = resolve => require.ensure([], () => resolve(require('@/pages/wlxx/Wlml')), 'wlxx')
+var Wllb = resolve => require.ensure([], () => resolve(require('@/pages/wlxx/Wllb')), 'wlxx')
+var Jldw = resolve => require.ensure([], () => resolve(require('@/pages/wlxx/Jldw')), 'wlxx')
+
+var Cpgl = resolve => require.ensure([], () => resolve(require('@/pages/Index')), 'cpgl')
+var Cpxx = resolve => require.ensure([], () => resolve(require('@/pages/cpgl/Cpxx')), 'cpgl')
+var Cplb = resolve => require.ensure([], () => resolve(require('@/pages/cpgl/Cplb')), 'cpgl')
+var Cpxl = resolve => require.ensure([], () => resolve(require('@/pages/cpgl/Cpxl')), 'cpgl')
+var Cpxlzd = resolve => require.ensure([], () => resolve(require('@/pages/cpgl/Cpxlzd')), 'cpgl')
+
+var Scll = resolve => require.ensure([], () => resolve(require('@/pages/Index')), 'scll')
+var Scwlxx = resolve => require.ensure([], () => resolve(require('@/pages/scll/Wlxx')), 'scll')
+var Cpqd = resolve => require.ensure([], () => resolve(require('@/pages/scll/Cpqd')), 'scll')
+var Bomqd = resolve => require.ensure([], () => resolve(require('@/pages/scll/Bomqd')), 'scll')
+var Scllqd = resolve => require.ensure([], () => resolve(require('@/pages/scll/Scllqd')), 'scll')
+
+var Workflow = resolve => require.ensure([], () => resolve(require('@/pages/Index')), 'workflow')
+var Flowdetpriv = resolve => require.ensure([], () => resolve(require('@/pages/workflow/Flowdetpriv')), 'workflow')
+
+var User = resolve => require.ensure([], () => resolve(require('@/pages/Index')), 'user')
+var Iconfont = resolve => require.ensure([], () => resolve(require('@/pages/user/iconfont')), 'user')
+
+var Pdf = resolve => require.ensure([], () => resolve(require('@/components/pdfjs/Pdfjs')), 'pdf')
 
 Vue.use(Router)
 
 export default new Router({
   routes: [{
     path: '/',
-    name: '首 页',
+    name: '首页',
     iconCls: 'icon-home_icon',
-    isShow: true,
-    component: Home
-  }, {
-    path: '/cpgl',
-    name: '产品管理',
-    iconCls: '',
-    isShow: true,
-    component: Cpgl,
-    // component: function (resolve) {
-    //   require(['@/components/cpgl/Index'], resolve)
-    // },
+    isShow: false,
+    component: Home,
+    redirect: '/index',
     children: [{
-      path: 'cpxx',
-      name: '产品选型',
-      iconCls: 'icon-category_find_icon',
-      isShow: true,
-      component: Cpxx
+      path: '/index',
+      name: '首 页',
+      iconCls: 'icon-home_icon',
+      component: HomeIndex
     }, {
-      path: 'cplb',
-      name: '产品类别',
-      iconCls: 'icon-list_icon',
-      isShow: true,
-      component: Cplb
-    }, {
-      path: 'cpxl',
-      name: '产品系列',
-      iconCls: 'icon-list_icon',
-      isShow: true,
-      component: Cpxl
-    }, {
-      path: 'cplbzd',
-      name: '字段管理',
-      isShow: true,
-      component: Cpxlzd
-    }, {
-      path: 'xlzd',
-      name: '系列字段',
-      iconCls: 'icon-more_icon',
-      isShow: true,
-      component: Cpxl
-    }]
-  }, {
-    path: '/wlxx',
-    name: '物料信息',
-    iconCls: 'icon-account_book_icon',
-    component: Wlxx,
-    children: [{
-      path: 'wllb',
-      name: '物料类别',
-      component: Wllb
-    }, {
-      path: 'wlml',
-      name: '物料目录',
-      component: Wlml
-    }, {
-      path: 'jldw',
-      name: '计量单位',
-      component: Jldw
-    }]
-  }, {
-    path: '/workflow',
-    name: '流程管理',
-    iconCls: 'icon-organization_icon',
-    component: Workflow,
-    children: [{
-      path: 'lcqx',
-      name: '流程权限',
+      path: '/cpgl',
+      name: '产品管理',
       iconCls: '',
-      component: Flowdetpriv
-    }]
-  }, {
-    path: '/user',
-    name: '用户管理',
-    iconCls: 'icon-account',
-    component: User,
-    children: [{
-      path: 'userinfo',
-      name: '用户信息',
-      iconCls: 'icon-my_icon',
-      component: Pdf
+      isShow: true,
+      component: Cpgl,
+      children: [{
+        path: 'cpxx',
+        name: '产品选型',
+        iconCls: 'icon-category_find_icon',
+        component: Cpxx
+      }, {
+        path: 'cplb',
+        name: '产品类别',
+        iconCls: 'icon-list_icon',
+        component: Cplb
+      }, {
+        path: 'cpxl',
+        name: '产品系列',
+        iconCls: 'icon-list_icon',
+        component: Cpxl
+      }, {
+        path: 'cplbzd',
+        name: '字段管理',
+        component: Cpxlzd
+      }, {
+        path: 'xlzd',
+        name: '系列字段',
+        iconCls: 'icon-more_icon',
+        component: Cpxl
+      }]
     }, {
-      path: 'iconfont',
-      name: '图标',
-      component: Iconfont
+      path: '/wlxx',
+      name: '物料信息',
+      iconCls: 'icon-account_book_icon',
+      component: Wlxx,
+      children: [{
+        path: 'wllb',
+        name: '物料类别',
+        component: Wllb
+      }, {
+        path: 'wlml',
+        name: '物料目录',
+        component: Wlml
+      }, {
+        path: 'jldw',
+        name: '计量单位',
+        component: Jldw
+      }]
     }, {
-      path: 'wllba',
-      name: '物料类别b',
-      component: Wllb
+      path: '/scll',
+      name: '生产领料',
+      iconCls: 'icon-organization_icon',
+      component: Scll,
+      children: [{
+        path: 'scwlxx',
+        name: '生产物料信息',
+        iconCls: '',
+        component: Scwlxx
+      }, {
+        path: 'bom',
+        name: '生产BOM',
+        iconCls: '',
+        component: Bomqd
+      }, {
+        path: 'cpqd',
+        name: '产品清单',
+        iconCls: '',
+        component: Cpqd
+      }, {
+        path: 'scllqd',
+        name: '生产领料清单',
+        iconCls: '',
+        component: Scllqd
+      }]
     }, {
-      path: 'wlmla',
-      name: '物料目录b',
-      component: Wlml
+      path: '/workflow',
+      name: '流程管理',
+      iconCls: 'icon-organization_icon',
+      component: Workflow,
+      children: [{
+        path: 'lcqx',
+        name: '流程权限',
+        iconCls: '',
+        component: Flowdetpriv
+      }]
     }, {
-      path: 'jldwa',
-      name: '计量单位b',
-      component: Jldw
+      path: '/user',
+      name: '用户管理',
+      iconCls: 'icon-account',
+      component: User,
+      children: [{
+        path: 'userinfo',
+        name: '用户信息',
+        iconCls: 'icon-my_icon',
+        component: Pdf
+      }, {
+        path: 'iconfont',
+        name: '图标',
+        component: Iconfont
+      }, {
+        path: 'wllba',
+        name: '物料类别b',
+        component: Wllb
+      }, {
+        path: 'wlmla',
+        name: '物料目录b',
+        component: Wlml
+      }, {
+        path: 'jldwa',
+        name: '计量单位b',
+        component: Jldw
+      }]
     }]
   }, {
     path: '/login',
@@ -131,5 +169,19 @@ export default new Router({
     name: 'PDF',
     isShow: false,
     component: Pdf
+  }, {
+    path: '*',
+    name: '404',
+    isShow: false,
+    component: {
+      template: '<div></div>'
+    }
+  }, {
+    path: '/404',
+    name: '404 Not Found',
+    isShow: false,
+    component: {
+      template: '<div>404 Page</404>'
+    }
   }]
 })

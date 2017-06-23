@@ -3,6 +3,7 @@
 import Vue from 'vue'
 // import Vuex from 'vuex'
 import axios from 'axios'
+import Cookies from 'js-cookie'
 import screenfull from 'screenfull'
 import ElemetUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
@@ -26,6 +27,7 @@ axios.defaults.withCredentials = true
 Vue.use(ElemetUI)
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
+Vue.prototype.$cookies = Cookies
 Vue.prototype.$screenfull = screenfull
 
 /* eslint-disable no-new */

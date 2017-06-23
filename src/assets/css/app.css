@@ -64,7 +64,7 @@
     }
   }
 
-  #main-body .aside-menu-warpper,
+  #main-body .side-menu-warpper,
   #main-body .main-section,
   #main-body .main-section .section {
     height: 100%
@@ -160,7 +160,7 @@
       height: 92%;
       width: 100%
     }
-    /*.aside-menu-warpper {
+    /*.side-menu-warpper {
       position: fixed
     }*/
     #main-body .main-section {

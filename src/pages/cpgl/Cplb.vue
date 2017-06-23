@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <el-col :xs="24" :sm="8" :md="7" :lg="6">
-      <wlfl @node-click="selected"></wlfl>
+      <!--<wlfl @node-click="selected"></wlfl>-->
     </el-col>
     <el-col :xs="23" :sm="15" :md="16" :lg="17" :offset="1">
       <el-col :span="23">
@@ -99,5 +99,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  
+
 </style>

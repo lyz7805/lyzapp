@@ -1,17 +1,34 @@
 <template>
   <div id="app">
-    <transition name="el-fade-in">
-      <router-view></router-view>
-    </transition>
+    <Main-header/>
+    <el-row id="main-body">
+      <el-col :sm="5" :md="4" :lg="3" class="side-menu-warpper">
+        <Side-menu/>
+      </el-col>
+      <el-col :sm="19" :md="20" :lg="21" class="main-section">
+        <el-row class="section">
+          <el-col :span="24" class="breadcrumb">
+            <Breadcrumb/>
+          </el-col>
+          <section class="el-col el-col-24">
+            <transition name="el-fade-in" mode="out-in">
+              <router-view></router-view>
+            </transition>
+          </section>
+        </el-row>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
+  import { MainHeader, SideMenu, Breadcrumb } from '@/components/commons'
   export default {
-    name: 'app',
-    data () {
-      return {
-      }
+    name: 'Home',
+    components: {
+      MainHeader,
+      SideMenu,
+      Breadcrumb
     },
     created () {
       var url = '/lyzapp/api/isLogin.php'

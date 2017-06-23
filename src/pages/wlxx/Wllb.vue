@@ -18,8 +18,8 @@
           <el-input v-model="wllb.dytmh" size="small" readonly></el-input>
         </el-form-item>
         <!--<el-form-item label="">
-          <el-button type="success" icon="search" @click="">search</el-button>
-        </el-form-item>-->
+            <el-button type="success" icon="search" @click="">search</el-button>
+          </el-form-item>-->
       </el-form>
       <!--</el-card>-->
     </el-col>
@@ -27,26 +27,25 @@
 </template>
 
 <script>
-// import axios from 'axios'
-import Wlfl from './Wlfl'
-export default {
-  name: 'wllb',
-  components: { 'wlfl': Wlfl },
-  data () {
-    return {
-      wllb: {}
-    }
-  },
-  methods: {
-    selected (data) {
-      this.wllb = data
+  // import axios from 'axios'
+  import Wlfl from './Wlfl'
+  export default {
+    name: 'wllb',
+    components: { 'wlfl': Wlfl },
+    data () {
+      return {
+        wllb: {}
+      }
+    },
+    methods: {
+      selected (data) {
+        this.wllb = data
+      }
     }
   }
-}
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  
 </style>
