@@ -1,3 +1,6 @@
 export default {
-  isLogin: false
+  isLogin: false,
+  scwlxx: [],
+  scbom: [],
+  sccpqd: []
 }
