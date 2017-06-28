@@ -16,7 +16,7 @@ var Cplb = resolve => require.ensure([], () => resolve(require('@/pages/cpgl/Cpl
 var Cpxl = resolve => require.ensure([], () => resolve(require('@/pages/cpgl/Cpxl')), 'cpgl')
 var Cpxlzd = resolve => require.ensure([], () => resolve(require('@/pages/cpgl/Cpxlzd')), 'cpgl')
 
-var Scll = resolve => require.ensure([], () => resolve(require('@/pages/Index')), 'scll')
+var Scll = resolve => require.ensure([], () => resolve(require('@/pages/scll/Index')), 'scll')
 var Scwlxx = resolve => require.ensure([], () => resolve(require('@/pages/scll/Wlxx')), 'scll')
 var Cpqd = resolve => require.ensure([], () => resolve(require('@/pages/scll/Cpqd')), 'scll')
 var Bomqd = resolve => require.ensure([], () => resolve(require('@/pages/scll/Bomqd')), 'scll')
@@ -97,27 +97,36 @@ export default new Router({
     }, {
       path: '/scll',
       name: '生产领料',
-      iconCls: 'icon-organization_icon',
+      iconCls: 'icon-cart_icon',
+      // redirect: '/scll/index',
       component: Scll,
       children: [{
+        path: 'index',
+        name: '生产领料单',
+        component: Scll
+      }, {
         path: 'scwlxx',
         name: '生产物料信息',
         iconCls: '',
+        isShow: false,
         component: Scwlxx
       }, {
-        path: 'bom',
+        path: 'scbom',
         name: '生产BOM',
         iconCls: '',
+        isShow: false,
         component: Bomqd
       }, {
-        path: 'cpqd',
+        path: 'sccpqd',
         name: '产品清单',
         iconCls: '',
+        isShow: false,
         component: Cpqd
       }, {
         path: 'scllqd',
         name: '生产领料清单',
         iconCls: '',
+        isShow: false,
         component: Scllqd
       }]
     }, {

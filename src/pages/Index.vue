@@ -1,7 +1,7 @@
 <template>
   <el-row>
     <template v-if="$route.matched.length === 2">
-      <Children-list/>
+      <Children-list></Children-list>
     </template>
     <template v-else>
       <transition name="el-zoom-in-top" mode="out-in">
@@ -23,5 +23,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  
 </style>
